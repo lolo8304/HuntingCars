@@ -369,7 +369,10 @@
 				E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */,
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
+<<<<<<< HEAD
 				E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */,
+=======
+>>>>>>> rest_api_test
 				0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
 				0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */,
