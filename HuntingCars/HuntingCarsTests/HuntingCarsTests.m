@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "RestApi.h"
+#import "VehicleApi.h"
 
 @interface HuntingCarsTests : XCTestCase
-@property (strong, nonatomic) RestApi* restApi;
+@property (strong, nonatomic) VehicleApi* restApi;
 @end
 
 @implementation HuntingCarsTests
@@ -18,7 +18,7 @@
 - (void)setUp {
     [super setUp];
     NSString *baseUrl = @"https://private-anon-25e20dbfa-amaghackzurich.apiary-mock.com/hackzurich";
-    self.restApi = [[RestApi alloc] initWithBaseUrl: baseUrl];
+    self.restApi = [[VehicleApi alloc] initWithBaseUrl: baseUrl];
 }
 
 - (void)tearDown {
@@ -26,9 +26,21 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    NSDictionary *fastCars = [self.restApi fetchFastCars];
+- (void)testE2EAvailability {
+    NSArray *fastCars = [self.restApi fetchFastCars];
     XCTAssertNotNil(fastCars);
+}
+
+- (void)testFetchingByMultipleScores {
+    // given
+    NSDictionary *dict = [NSDictionary dictionaryWithObjects: @[@5, @5, @5, @5, @5] forKeys: @[@"family", @"sport", @"eco", @"design", @"offroad"]];
+    
+    // when
+    NSArray *results = [self.restApi fetchCarsByScores:dict];
+    
+    // then
+    XCTAssertNotNil(results);
+    XCTAssertTrue([results count] > 0);
 }
 
 - (void)testPerformanceExample {

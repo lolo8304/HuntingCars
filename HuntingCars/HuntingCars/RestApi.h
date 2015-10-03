@@ -12,8 +12,7 @@
 @interface RestApi : NSObject
 
 - (id) initWithBaseUrl: (NSString*) baseUrl;
-- (NSDictionary*) fetchAllCars;
-- (NSDictionary*) fetchFastCars;
+- (NSArray*) queryServer: (NSString*) query;
 @end
 
 #endif /* RestApi_h */

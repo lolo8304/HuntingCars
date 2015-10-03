@@ -23,19 +23,9 @@
     return self;
 }
 
-- (NSDictionary*) fetchAllCars
+- (NSArray*) queryServer: (NSString*) query
 {
-    return [self queryServer:@"vehicles.json"];
-}
-
-- (NSDictionary*) fetchFastCars
-{
-    return [self queryServer:[NSString stringWithFormat:@"/score/sport/5.json"]];
-}
-
-- (NSDictionary*) queryServer: (NSString*) query
-{
-    __block NSDictionary *vehicles = nil;
+    __block NSArray *vehicles = nil;
     
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@", self.baseUrl,query];
     NSURL *url = [NSURL URLWithString: requestUrl];
@@ -45,7 +35,8 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error: &error];
     
     if (error == nil) {
-        vehicles = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        NSDictionary *responseBody = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        vehicles = [responseBody objectForKey:@"vehicles"];
     }
     
     return vehicles;
