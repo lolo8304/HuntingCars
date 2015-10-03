@@ -50,7 +50,20 @@
 {
     NSString *queryUrl = [NSString stringWithFormat:@"/vehicle/%@.json", vid];
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[super queryForSingleObject: queryUrl]];
+    [result setObject:[self translateImages: [result objectForKey: @"vehicleImages"]] forKey:@"vehicleImages"];
     return result;
+}
+
+-(NSArray*) translateImages: (NSArray*) imageDictArray
+{
+    NSMutableArray *imageUrls = nil;
+    if (imageDictArray != nil && [imageDictArray count] > 0) {
+        imageUrls = [NSMutableArray array];
+        for (NSDictionary *dict in imageDictArray) {
+            [imageUrls addObject:[NSString stringWithFormat:@"%@/image/%@/thumbnail", [super baseUrl], [dict objectForKey: @"id"]]];
+        }
+    }
+    return imageUrls;
 }
 
 - (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSValue*) value

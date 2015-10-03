@@ -50,6 +50,7 @@
     // then
     XCTAssertNotNil(result);
     XCTAssertNotNil(images);
+    XCTAssertTrue([images containsObject:@"http://api.hackzurich.amag.ch/hackzurich/image/2905/thumbnail"]);
 }
 
 -(NSValue*) standardValue

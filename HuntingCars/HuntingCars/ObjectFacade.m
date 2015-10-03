@@ -36,6 +36,11 @@
     return [self asVehicleResults: searchResults];
 }
 
+-(VehicleDAO*) findVehicleByVin: (NSString*) vin
+{
+    return [[VehicleDAO alloc] initWithDictionary:[self.api fetchDetailsByVin:vin]];
+}
+
 -(void) saveSearchResults: (NSArray*) searchResults
 {
     [[ApplicationState instance] setFoundCars: [NSArray arrayWithArray: searchResults]];

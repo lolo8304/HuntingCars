@@ -10,6 +10,7 @@
 #define RestApi_h
 
 @interface RestApi : NSObject
+@property (strong, nonatomic) NSString *baseUrl;
 
 - (id) initWithBaseUrl: (NSString*) baseUrl;
 - (NSArray*) queryServer: (NSString*) query;
