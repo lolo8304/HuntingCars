@@ -135,17 +135,13 @@
     [self.customerProfile setPriceTCOperMonthString: self.totalPriceField.text];
     
 }
-
-
-- (IBAction)huntCarPressed:(id)sender {
-    [self updateCustomerProfile];
-    ShowLoader* loader = [[ShowLoader alloc] initWithController: self];
-    [loader perform: ^{
-        
-        
-        
-    } title: @"loading results" success: @"found" failure: @"not found" segueWithIdentifier:@"huntCars" sender:sender];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    if ([segue.identifier isEqualToString:@"huntCars"]) {
+        [self updateCustomerProfile];
+    }
+
 }
+
 
 @end

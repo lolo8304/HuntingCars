@@ -12,6 +12,7 @@
 
 @interface VehicleApi : RestApi
 
+- (id) initWithBaseUrl: (NSString*) baseUrl;
 - (NSArray*) fetchAllCars;
 - (NSArray*) fetchCarsByScores: (NSDictionary*) scores;
 - (NSDictionary*) fetchDetailsByVin: (NSString*) vid;
