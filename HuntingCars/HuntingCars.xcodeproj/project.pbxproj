@@ -21,6 +21,7 @@
 		E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073741BBFA2450023AD57 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		E170736E1BBF84870023AD57 /* DetailsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMapViewController.m; sourceTree = "<group>"; };
 		E17073701BBF84930023AD57 /* DetailsHuntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsHuntViewController.h; sourceTree = "<group>"; };
 		E17073711BBF84930023AD57 /* DetailsHuntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsHuntViewController.m; sourceTree = "<group>"; };
+		E17073731BBFA2450023AD57 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerProfile.h; path = Assets.xcassets/CustomerProfile.h; sourceTree = "<group>"; };
+		E17073741BBFA2450023AD57 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerProfile.m; path = Assets.xcassets/CustomerProfile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,8 @@
 		E170735F1BBF6DD10023AD57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E17073731BBFA2450023AD57 /* CustomerProfile.h */,
+				E17073741BBFA2450023AD57 /* CustomerProfile.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */,
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
+				E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
 				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
 				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
@@ -522,6 +528,7 @@
 				E17073511BBF6A3C0023AD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E17073521BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCarsTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				E17073541BBF6A3C0023AD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

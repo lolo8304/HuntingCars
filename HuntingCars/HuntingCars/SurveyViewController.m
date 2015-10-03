@@ -10,6 +10,9 @@
 
 @interface SurveyViewController ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *testLabel;
+
+
 @end
 
 @implementation SurveyViewController
