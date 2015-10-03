@@ -27,10 +27,12 @@
     for (NSString* key in scores)
     {
         NSValue *value = [scores objectForKey:key];
+        NSLog([NSString stringWithFormat:@"Searching with %@ and %@", key, value]);
         if ([value rangeValue].location > 0) //values <= 0 don't have to be searched, because there are no negative scores.
         {
             NSString *queryString = [self ratingQueryWithKey: key andValue: [scores objectForKey: key]];
             NSArray* resultForScore = [super queryServer: queryString];
+            NSLog([NSString stringWithFormat:@"Found %lu results", (unsigned long)[resultForScore count]]);
             if (results == nil)
             {
                 results = [NSMutableSet set];
