@@ -133,6 +133,20 @@
     XCTAssertTrue(1 == [designValue rangeValue].length);
 }
 
+-(void) testFamilyStatusModifications {
+    // given
+    [self.profile setFamilyStatus:@"alone"];
+    ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
+    
+    // when
+    NSDictionary *criteria = [cruncher calculateSearchCriteria];
+    NSValue *designValue = [criteria objectForKey:@"design"];
+    
+    // then
+    XCTAssertTrue(3 == [designValue rangeValue].location); //it's 2 because the age check decreases it by 1 first.
+    XCTAssertTrue(1 == [designValue rangeValue].length);
+}
+
 -(void) testNegativeRangeIsPossible {
     NSRange range = NSMakeRange(-1, 1);
     XCTAssertTrue(range.location == -1);

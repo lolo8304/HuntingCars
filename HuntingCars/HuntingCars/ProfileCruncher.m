@@ -26,6 +26,10 @@
     
     searchCriteria = [self updateByGender: searchCriteria];
     searchCriteria = [self updateByAge: searchCriteria];
+    searchCriteria = [self updateByFamilyStatus: searchCriteria];
+    searchCriteria = [self updateByHorsepower: searchCriteria];
+    searchCriteria = [self updateByDesign: searchCriteria];
+    searchCriteria = [self updateByPrice: searchCriteria];
     
     return searchCriteria;
 }
@@ -65,6 +69,68 @@
     else
     {
         [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
+    }
+    return dict;
+}
+
+-(NSDictionary*) updateByFamilyStatus: (NSDictionary*) original
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
+    if ([@"alone" isEqualToString:[self.profile familyStatus]])
+    {
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 1)] forKey:@"design"];
+    }
+    return dict;
+}
+
+-(NSDictionary*) updateByHorsepower: (NSDictionary*) original
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: original];
+    if ([self.profile horsePower] != nil)
+    {
+        [dict setObject:[NSValue valueWithRange: NSMakeRange((unsigned long)[self.profile horsePower], 1)] forKey:@"sport"];
+    }
+    return dict;
+}
+
+-(NSDictionary*) updateByDesign: (NSDictionary*) original
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
+    switch ([self.profile design]) {
+        case 1:
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(4, 1)] forKey:@"sport"];
+            break;
+        case 2:
+            [dict setObject: [NSValue valueWithRange:NSMakeRange(4, 1)] forKey:@"family"];
+            break;
+        case 3:
+            [dict setObject: [NSValue valueWithRange:NSMakeRange(4, 1)] forKey:@"offroad"];
+            break;
+        case 4:
+            [dict setObject: [NSValue valueWithRange:NSMakeRange(3, 1)] forKey:@"offroad"];
+            break;
+        case 5:
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"offroad"];
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(4, 1)] forKey:@"eco"];
+            break;
+        case 6:
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"design"];
+            break;
+        case 7:
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"price"];
+            break;
+        default:
+            break;
+    }
+    return dict;
+}
+
+-(NSDictionary*) updateByPrice: (NSDictionary*) original
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
+    if ([self.profile priceToBuy] != nil)
+    {
+        [dict setObject:[NSValue valueWithRange:NSMakeRange((unsigned long)[self.profile priceToBuy], 1)] forKey:@"price"];
     }
     return dict;
 }

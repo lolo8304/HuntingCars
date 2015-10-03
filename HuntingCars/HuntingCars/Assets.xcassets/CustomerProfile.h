@@ -13,6 +13,6 @@
 @property (strong, nonatomic) NSString* familyStatus;
 @property NSRange age;
 @property NSInteger* horsePower;
-@property NSInteger* design;
+@property integer_t design;
 @property NSInteger* priceToBuy;
 @end
