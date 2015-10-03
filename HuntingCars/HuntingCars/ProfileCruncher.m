@@ -50,7 +50,10 @@
 -(NSDictionary*) updateByAge: (NSDictionary*) original
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
-    if (26 > [self.profile age].location)
+    if (0 == [self.profile age].location) {
+        /* skip */
+    }
+    else if (26 > [self.profile age].location)
     {
         [dict setObject:[self decreaseValueOf:dict withKey:@"price"] forKey:@"price"];
         [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
