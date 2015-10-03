@@ -34,6 +34,8 @@
 
 - (void)initModelWith: (ApplicationState*) state {
     self.customerProfile = [state customerProfile];
+    [self.genderSegment setSelectedSegmentIndex: self.customerProfile.getGenderIndex];
+    self.ageSegment setSelectedSegmentIndex: self.customerProfile.age
     [self.priceSlider setValue: (float)[self.customerProfile priceToBuy]];
 }
 
