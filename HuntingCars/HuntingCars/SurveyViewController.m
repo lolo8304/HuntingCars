@@ -9,6 +9,7 @@
 #import "SurveyViewController.h"
 #import "CustomerProfile.h"
 #import "ApplicationState.h"
+#import "ShowLoader.h"
 
 @interface SurveyViewController ()
 
@@ -124,7 +125,7 @@
     NSLog(@"current designSegment = %li", (long)[self getDesignSegment]);
 }
 
-- (IBAction)huntCarPressed:(id)sender {
+- (void) updateCustomerProfile {
     [self.customerProfile setGenderIndex: self.genderSegment.selectedSegmentIndex];
     [self.customerProfile setAgeIndex: self.ageSegment.selectedSegmentIndex];
     [self.customerProfile setFamilyStatusIndex: self.familyStatusSegment.selectedSegmentIndex];
@@ -132,7 +133,19 @@
     [self.customerProfile setDesignIndex: [self getDesignSegment]];
     [self.customerProfile setPriceToBuy: self.priceSlider.value];
     [self.customerProfile setPriceTCOperMonthString: self.totalPriceField.text];
+    
+}
 
+
+- (IBAction)huntCarPressed:(id)sender {
+    [self updateCustomerProfile];
+    ShowLoader* loader = [[ShowLoader alloc] initWithController: self];
+    [loader perform: ^{
+        
+        
+        
+    } title: @"loading results" success: @"found" failure: @"not found" segueWithIdentifier:@"huntCars" sender:sender];
+    
 }
 
 @end
