@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface RestApi : NSObject
-@property (strong, nonatomic) NSString *baseUrl;
-@end
+#import "RestApi.h"
 
 @implementation RestApi
 
