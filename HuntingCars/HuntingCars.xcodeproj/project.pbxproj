@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E17073321BBF6A380023AD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073311BBF6A380023AD57 /* main.m */; };
+		E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073341BBF6A390023AD57 /* AppDelegate.m */; };
+		E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073371BBF6A390023AD57 /* SurveyViewController.m */; };
+		E170733B1BBF6A3A0023AD57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17073391BBF6A3A0023AD57 /* Main.storyboard */; };
+		E170733D1BBF6A3A0023AD57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E170733C1BBF6A3A0023AD57 /* Assets.xcassets */; };
+		E17073401BBF6A3A0023AD57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E170733E1BBF6A3A0023AD57 /* LaunchScreen.storyboard */; };
+		E170734B1BBF6A3C0023AD57 /* HuntingCarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E170734A1BBF6A3C0023AD57 /* HuntingCarsTests.m */; };
+		E17073561BBF6B860023AD57 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17073551BBF6B860023AD57 /* MapKit.framework */; };
+		E17073631BBF84570023AD57 /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073621BBF84570023AD57 /* RatingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073651BBF84650023AD57 /* MyCarsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073681BBF846E0023AD57 /* DetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E17073471BBF6A3C0023AD57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E17073251BBF6A370023AD57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E170732C1BBF6A370023AD57;
+			remoteInfo = HuntingCars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E170732D1BBF6A380023AD57 /* HuntingCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuntingCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17073311BBF6A380023AD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E17073331BBF6A390023AD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E17073341BBF6A390023AD57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E17073361BBF6A390023AD57 /* SurveyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
+		E17073371BBF6A390023AD57 /* SurveyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
+		E170733A1BBF6A3A0023AD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E170733C1BBF6A3A0023AD57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E170733F1BBF6A3A0023AD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E17073411BBF6A3A0023AD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17073461BBF6A3C0023AD57 /* HuntingCarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuntingCarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E170734A1BBF6A3C0023AD57 /* HuntingCarsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuntingCarsTests.m; sourceTree = "<group>"; };
+		E170734C1BBF6A3C0023AD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17073551BBF6B860023AD57 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E17073601BBF6E3A0023AD57 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		E17073611BBF84570023AD57 /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
+		E17073621BBF84570023AD57 /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
+		E17073641BBF84650023AD57 /* MyCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarsViewController.h; sourceTree = "<group>"; };
+		E17073651BBF84650023AD57 /* MyCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarsViewController.m; sourceTree = "<group>"; };
+		E17073671BBF846E0023AD57 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		E17073681BBF846E0023AD57 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		E170736A1BBF847C0023AD57 /* DetailsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsInfoViewController.h; sourceTree = "<group>"; };
+		E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsInfoViewController.m; sourceTree = "<group>"; };
+		E170736D1BBF84870023AD57 /* DetailsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsMapViewController.h; sourceTree = "<group>"; };
+		E170736E1BBF84870023AD57 /* DetailsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMapViewController.m; sourceTree = "<group>"; };
+		E17073701BBF84930023AD57 /* DetailsHuntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsHuntViewController.h; sourceTree = "<group>"; };
+		E17073711BBF84930023AD57 /* DetailsHuntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsHuntViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E170732A1BBF6A370023AD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17073561BBF6B860023AD57 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17073431BBF6A3C0023AD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E17073241BBF6A370023AD57 = {
+			isa = PBXGroup;
+			children = (
+				E17073551BBF6B860023AD57 /* MapKit.framework */,
+				E170732F1BBF6A380023AD57 /* HuntingCars */,
+				E17073491BBF6A3C0023AD57 /* HuntingCarsTests */,
+				E170732E1BBF6A380023AD57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E170732E1BBF6A380023AD57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E170732D1BBF6A380023AD57 /* HuntingCars.app */,
+				E17073461BBF6A3C0023AD57 /* HuntingCarsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E170732F1BBF6A380023AD57 /* HuntingCars */ = {
+			isa = PBXGroup;
+			children = (
+				E17073601BBF6E3A0023AD57 /* Const.h */,
+				E170735F1BBF6DD10023AD57 /* Models */,
+				E17073571BBF6D0F0023AD57 /* Controllers */,
+				E17073331BBF6A390023AD57 /* AppDelegate.h */,
+				E17073341BBF6A390023AD57 /* AppDelegate.m */,
+				E17073391BBF6A3A0023AD57 /* Main.storyboard */,
+				E170733C1BBF6A3A0023AD57 /* Assets.xcassets */,
+				E170733E1BBF6A3A0023AD57 /* LaunchScreen.storyboard */,
+				E17073411BBF6A3A0023AD57 /* Info.plist */,
+				E17073301BBF6A380023AD57 /* Supporting Files */,
+			);
+			path = HuntingCars;
+			sourceTree = "<group>";
+		};
+		E17073301BBF6A380023AD57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E17073311BBF6A380023AD57 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E17073491BBF6A3C0023AD57 /* HuntingCarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E170734A1BBF6A3C0023AD57 /* HuntingCarsTests.m */,
+				E170734C1BBF6A3C0023AD57 /* Info.plist */,
+			);
+			path = HuntingCarsTests;
+			sourceTree = "<group>";
+		};
+		E17073571BBF6D0F0023AD57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E17073581BBF6D1A0023AD57 /* Survey */,
+				E17073591BBF6D370023AD57 /* Rating */,
+				E170735A1BBF6D400023AD57 /* MyCars */,
+				E170735B1BBF6D4C0023AD57 /* Details */,
+				E170735C1BBF6D550023AD57 /* DetailsInfo */,
+				E170735D1BBF6D5E0023AD57 /* DetailsMap */,
+				E170735E1BBF6D650023AD57 /* DetailsHunt */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E17073581BBF6D1A0023AD57 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				E17073361BBF6A390023AD57 /* SurveyViewController.h */,
+				E17073371BBF6A390023AD57 /* SurveyViewController.m */,
+			);
+			name = Survey;
+			sourceTree = "<group>";
+		};
+		E17073591BBF6D370023AD57 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				E17073611BBF84570023AD57 /* RatingViewController.h */,
+				E17073621BBF84570023AD57 /* RatingViewController.m */,
+			);
+			name = Rating;
+			sourceTree = "<group>";
+		};
+		E170735A1BBF6D400023AD57 /* MyCars */ = {
+			isa = PBXGroup;
+			children = (
+				E17073641BBF84650023AD57 /* MyCarsViewController.h */,
+				E17073651BBF84650023AD57 /* MyCarsViewController.m */,
+			);
+			name = MyCars;
+			sourceTree = "<group>";
+		};
+		E170735B1BBF6D4C0023AD57 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E17073671BBF846E0023AD57 /* DetailsViewController.h */,
+				E17073681BBF846E0023AD57 /* DetailsViewController.m */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		E170735C1BBF6D550023AD57 /* DetailsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E170736A1BBF847C0023AD57 /* DetailsInfoViewController.h */,
+				E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */,
+			);
+			name = DetailsInfo;
+			sourceTree = "<group>";
+		};
+		E170735D1BBF6D5E0023AD57 /* DetailsMap */ = {
+			isa = PBXGroup;
+			children = (
+				E170736D1BBF84870023AD57 /* DetailsMapViewController.h */,
+				E170736E1BBF84870023AD57 /* DetailsMapViewController.m */,
+			);
+			name = DetailsMap;
+			sourceTree = "<group>";
+		};
+		E170735E1BBF6D650023AD57 /* DetailsHunt */ = {
+			isa = PBXGroup;
+			children = (
+				E17073701BBF84930023AD57 /* DetailsHuntViewController.h */,
+				E17073711BBF84930023AD57 /* DetailsHuntViewController.m */,
+			);
+			name = DetailsHunt;
+			sourceTree = "<group>";
+		};
+		E170735F1BBF6DD10023AD57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E170732C1BBF6A370023AD57 /* HuntingCars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E170734F1BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCars" */;
+			buildPhases = (
+				E17073291BBF6A370023AD57 /* Sources */,
+				E170732A1BBF6A370023AD57 /* Frameworks */,
+				E170732B1BBF6A370023AD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuntingCars;
+			productName = HuntingCars;
+			productReference = E170732D1BBF6A380023AD57 /* HuntingCars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E17073451BBF6A3C0023AD57 /* HuntingCarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E17073521BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCarsTests" */;
+			buildPhases = (
+				E17073421BBF6A3C0023AD57 /* Sources */,
+				E17073431BBF6A3C0023AD57 /* Frameworks */,
+				E17073441BBF6A3C0023AD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E17073481BBF6A3C0023AD57 /* PBXTargetDependency */,
+			);
+			name = HuntingCarsTests;
+			productName = HuntingCarsTests;
+			productReference = E17073461BBF6A3C0023AD57 /* HuntingCarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E17073251BBF6A370023AD57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = hackZurich;
+				TargetAttributes = {
+					E170732C1BBF6A370023AD57 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = W3U24WE3R3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E17073451BBF6A3C0023AD57 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = E170732C1BBF6A370023AD57;
+					};
+				};
+			};
+			buildConfigurationList = E17073281BBF6A370023AD57 /* Build configuration list for PBXProject "HuntingCars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E17073241BBF6A370023AD57;
+			productRefGroup = E170732E1BBF6A380023AD57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E170732C1BBF6A370023AD57 /* HuntingCars */,
+				E17073451BBF6A3C0023AD57 /* HuntingCarsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E170732B1BBF6A370023AD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17073401BBF6A3A0023AD57 /* LaunchScreen.storyboard in Resources */,
+				E170733D1BBF6A3A0023AD57 /* Assets.xcassets in Resources */,
+				E170733B1BBF6A3A0023AD57 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17073441BBF6A3C0023AD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E17073291BBF6A370023AD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */,
+				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
+				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
+				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
+				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
+				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
+				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
+				E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */,
+				E17073321BBF6A380023AD57 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17073421BBF6A3C0023AD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E170734B1BBF6A3C0023AD57 /* HuntingCarsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E17073481BBF6A3C0023AD57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E170732C1BBF6A370023AD57 /* HuntingCars */;
+			targetProxy = E17073471BBF6A3C0023AD57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E17073391BBF6A3A0023AD57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E170733A1BBF6A3A0023AD57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E170733E1BBF6A3A0023AD57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E170733F1BBF6A3A0023AD57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E170734D1BBF6A3C0023AD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E170734E1BBF6A3C0023AD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E17073501BBF6A3C0023AD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HuntingCars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackzurich.HuntingCars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E17073511BBF6A3C0023AD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HuntingCars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackzurich.HuntingCars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E17073531BBF6A3C0023AD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HuntingCarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackzurich.HuntingCarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuntingCars.app/HuntingCars";
+			};
+			name = Debug;
+		};
+		E17073541BBF6A3C0023AD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HuntingCarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackzurich.HuntingCarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuntingCars.app/HuntingCars";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E17073281BBF6A370023AD57 /* Build configuration list for PBXProject "HuntingCars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E170734D1BBF6A3C0023AD57 /* Debug */,
+				E170734E1BBF6A3C0023AD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E170734F1BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E17073501BBF6A3C0023AD57 /* Debug */,
+				E17073511BBF6A3C0023AD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E17073521BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E17073531BBF6A3C0023AD57 /* Debug */,
+				E17073541BBF6A3C0023AD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E17073251BBF6A370023AD57 /* Project object */;
+}
