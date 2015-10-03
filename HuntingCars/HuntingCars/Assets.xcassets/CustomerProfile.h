@@ -11,7 +11,7 @@
 @interface CustomerProfile : NSObject
 @property (strong, nonatomic) NSString* gender;
 @property (strong, nonatomic) NSString* familyStatus;
-@property NSRange* age;
+@property NSRange age;
 @property NSInteger* horsePower;
 @property NSInteger* design;
 @property NSInteger* priceToBuy;

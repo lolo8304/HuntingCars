@@ -64,6 +64,75 @@
     
 }
 
+- (void)testYoungAgeModifications {
+    // given
+    [self.profile setAge: NSMakeRange(0, 25)];
+    ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
+    
+    // when
+    NSDictionary *criteria = [cruncher calculateSearchCriteria];
+    NSValue *familyValue = (NSValue*) [criteria objectForKey:@"family"];
+    NSValue *priceValue = (NSValue*) [criteria objectForKey:@"price"];
+    
+    // then
+    NSRange familyRange = [familyValue rangeValue];
+    XCTAssertTrue(1 == familyRange.location);
+    
+    NSRange priceRange = [priceValue rangeValue];
+    XCTAssertTrue(-1 == priceRange.location);
+}
+
+-(void) testMediumAgeModifications {
+    // given
+    [self.profile setAge: NSMakeRange(26, 9)];
+    ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
+    
+    // when
+    NSDictionary *criteria = [cruncher calculateSearchCriteria];
+    NSValue *familyValue = [criteria objectForKey:@"family"];
+    NSValue *ecoValue = [criteria objectForKey:@"eco"];
+    NSValue *designValue = [criteria objectForKey:@"design"];
+    
+    // then
+    XCTAssertTrue(1 == [familyValue rangeValue].location);
+    XCTAssertTrue(2 == [familyValue rangeValue].length);
+    XCTAssertTrue(3 == [ecoValue rangeValue].location);
+    XCTAssertTrue(2 == [ecoValue rangeValue].length);
+    XCTAssertTrue(0 == [designValue rangeValue].location); //it's 0 because the age check decreases it by 1 first.
+    XCTAssertTrue(1 == [designValue rangeValue].length);
+}
+
+-(void) testUpperAgeModifications {
+    // given
+    [self.profile setAge: NSMakeRange(36, 9)];
+    ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
+    
+    // when
+    NSDictionary *criteria = [cruncher calculateSearchCriteria];
+    NSValue *familyValue = [criteria objectForKey:@"family"];
+    NSValue *ecoValue = [criteria objectForKey:@"eco"];
+    
+    // then
+    XCTAssertTrue(1 == [familyValue rangeValue].location);
+    XCTAssertTrue(2 == [familyValue rangeValue].length);
+    XCTAssertTrue(3 == [ecoValue rangeValue].location);
+    XCTAssertTrue(2 == [ecoValue rangeValue].length);
+}
+
+-(void) testSeniorAgeSegmendModifications {
+    // given
+    [self.profile setAge: NSMakeRange(46, 9)];
+    ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
+    
+    // when
+    NSDictionary *criteria = [cruncher calculateSearchCriteria];
+    NSValue *designValue = [criteria objectForKey:@"design"];
+    
+    // then
+    XCTAssertTrue(0 == [designValue rangeValue].location); //it's 0 because the age check decreases it by 1 first.
+    XCTAssertTrue(1 == [designValue rangeValue].length);
+}
+
 -(void) testNegativeRangeIsPossible {
     NSRange range = NSMakeRange(-1, 1);
     XCTAssertTrue(range.location == -1);

@@ -25,19 +25,46 @@
     NSDictionary *searchCriteria = [self initialValues];
     
     searchCriteria = [self updateByGender: searchCriteria];
+    searchCriteria = [self updateByAge: searchCriteria];
     
     return searchCriteria;
 }
 
 -(NSDictionary*) updateByGender: (NSDictionary*) original
 {
-    __block NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
     if ([@"male" isEqualToString:[self.profile gender]]) {
         [dict setObject:[self increaseValueOf:dict withKey:@"sport"] forKey:@"sport"];
         [dict setObject:[self increaseValueOf:dict withKey:@"offroad"] forKey:@"offroad"];
     } else {
         [dict setObject:[self increaseValueOf:dict withKey:@"family"] forKey:@"family"];
         [dict setObject:[self decreaseValueOf: dict withKey: @"design"] forKey:@"design"];
+    }
+    return dict;
+}
+
+-(NSDictionary*) updateByAge: (NSDictionary*) original
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
+    if (26 > [self.profile age].location)
+    {
+        [dict setObject:[self decreaseValueOf:dict withKey:@"price"] forKey:@"price"];
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
+    }
+    else if (36 > [self.profile age].location)
+    {
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"family"];
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 2)] forKey:@"eco"];
+        [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
+    }
+    else if (46 > [self.profile age].location)
+    {
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"family"];
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 2)] forKey:@"eco"];
+    }
+    else
+    {
+        [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
     }
     return dict;
 }
