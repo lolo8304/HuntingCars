@@ -16,8 +16,9 @@
     self.horsePower = 1;
     self.gender = nil;
     self.age = NSMakeRange(0, 0);
-    self. familyStatus = nil;
+    self.familyStatus = nil;
     self.design = 0;
+    self.priceTCOperMonth = 0;
     return self;
 }
 
@@ -25,6 +26,7 @@
     self.familyStatus = [NSString stringWithFormat:@"%d", index];
 }
 - (int) getFamilyStatusIndex {
+    if (self.familyStatus == nil) { return -1; }
     return [self.familyStatus intValue];
 }
 
@@ -32,6 +34,7 @@
     self.gender = [NSString stringWithFormat:@"%d", index];
 }
 - (int) getGenderIndex {
+    if (self.gender == nil) { return -1; }
     return [self.gender intValue];
 }
 
@@ -84,5 +87,23 @@
             break;
     }
 }
+
+/* design = 1..7, index = 0..6 */
+- (int) getDesignIndex {
+    return self.design -1;
+}
+- (void) setDesignIndex: (int) index {
+    self.design = index + 1;
+}
+
+
+- (NSString*) getPriceTCOperMonthString {
+    if (self.priceTCOperMonth == 0) { return @""; }
+    return [NSString stringWithFormat:@"%d", (int)self.priceTCOperMonth];
+}
+- (void) setPriceTCOperMonthString: (NSString *) string {
+    self.priceTCOperMonth = string.intValue;
+}
+
 
 @end

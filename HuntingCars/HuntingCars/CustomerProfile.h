@@ -42,5 +42,13 @@
 - (void) setFamilyStatusIndex: (int) index;
 - (int) getFamilyStatusIndex;
 
+- (void) setAgeIndex: (int) index;
+- (int) getAgeIndex;
+
+- (void) setDesignIndex: (int) index;
+- (int) getDesignIndex;
+
+- (NSString*) getPriceTCOperMonthString;
+    - (void) setPriceTCOperMonthString: (NSString *) string;
 
 @end
