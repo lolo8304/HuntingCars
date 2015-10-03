@@ -15,4 +15,6 @@
 
 -(id) initWithApi: (VehicleApi*) api;
 -(NSArray*) findMatchingCarsByProfile: (CustomerProfile*) profile;
+-(void) saveSearchResults: (NSArray*) searchResults;
+-(NSArray*) restoreSearchResults;
 @end
