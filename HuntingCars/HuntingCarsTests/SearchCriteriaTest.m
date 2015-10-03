@@ -66,7 +66,7 @@
 
 - (void)testYoungAgeModifications {
     // given
-    [self.profile setAge: NSMakeRange(0, 25)];
+    [self.profile setAge: NSMakeRange(18, 1)];
     ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile:self.profile];
     
     // when
@@ -79,7 +79,7 @@
     XCTAssertTrue(1 == familyRange.location);
     
     NSRange priceRange = [priceValue rangeValue];
-    XCTAssertTrue(-1 == priceRange.location);
+    XCTAssertTrue(1 == priceRange.location);
 }
 
 -(void) testMediumAgeModifications {

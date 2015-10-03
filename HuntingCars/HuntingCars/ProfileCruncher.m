@@ -164,8 +164,8 @@
 
 -(NSMutableDictionary*) initialValues
 {
-    return [NSMutableDictionary dictionaryWithObjects: @[[NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)]]
-                                                     forKeys: @[@"family", @"sport", @"eco", @"design", @"offroad"]];
+    return [NSMutableDictionary dictionaryWithObjects: @[[NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)], [NSValue valueWithRange:NSMakeRange(0, 1)]]
+                                                     forKeys: @[@"family", @"sport", @"eco", @"design", @"offroad", @"price"]];
 }
 
 @end
