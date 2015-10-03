@@ -42,9 +42,10 @@
     return [super queryServer:[NSString stringWithFormat:@"/score/sport/5.json"]];
 }
 
-- (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSString*) value
+- (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSValue*) value
 {
-    return [NSString stringWithFormat: @"/score/%@/%@.json", key, value];
+    NSRange range = [value rangeValue];
+    return [NSString stringWithFormat: @"/score/%@/%lu/%lu.json", key, (unsigned long)range.location, (unsigned long)NSMaxRange(range)];
 }
 
 
