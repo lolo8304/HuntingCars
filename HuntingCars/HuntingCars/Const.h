@@ -12,6 +12,7 @@
 #define FONT_BOOK @"ITCFranklinGothicStd-Book"
 #define FONT_DEMI @"ITCFranklinGothicStd-Demi"
 #define FONT_DEMI_CONDENSED @"ITCFranklinGothicStd-DmCd"
+#define REST_API_BASE_URL @"http://api.hackzurich.amag.ch/hackzurich"
 
 #define FAST_MODE 1
 

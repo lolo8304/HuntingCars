@@ -25,8 +25,17 @@
 
 - (NSArray*) queryServer: (NSString*) query
 {
-    __block NSArray *vehicles = nil;
-    
+    NSArray *vehicles = nil;
+    NSDictionary *responseBody = [self queryForSingleObject:query];
+    if (responseBody != nil) {
+        vehicles = [responseBody objectForKey:@"vehicles"];
+    }
+    return vehicles;
+}
+
+-(NSDictionary*) queryForSingleObject: (NSString*) query
+{
+    NSDictionary *responseBody = nil;
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@", self.baseUrl,query];
     NSURL *url = [NSURL URLWithString: requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL: url];
@@ -35,12 +44,10 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error: &error];
     
     if (error == nil) {
-        NSDictionary *responseBody = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-        vehicles = [responseBody objectForKey:@"vehicles"];
+        responseBody = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
     }
     
-    return vehicles;
-
+    return responseBody;
 }
 
 @end

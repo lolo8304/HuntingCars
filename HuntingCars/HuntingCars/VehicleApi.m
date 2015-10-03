@@ -46,6 +46,13 @@
     return [super queryServer:[NSString stringWithFormat:@"/score/sport/5.json"]];
 }
 
+- (NSDictionary*) fetchDetailsByVin: (NSString*) vid
+{
+    NSString *queryUrl = [NSString stringWithFormat:@"/vehicle/%@.json", vid];
+    NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[super queryForSingleObject: queryUrl]];
+    return result;
+}
+
 - (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSValue*) value
 {
     NSRange range = [value rangeValue];
