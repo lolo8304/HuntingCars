@@ -15,6 +15,8 @@
 - (id) init;
 
 @property (strong, nonatomic) CustomerProfile* customerProfile;
+@property (strong, nonatomic) NSArray *foundCars; // search results are 'persisted' here.
+@property (strong, nonatomic) NSArray *chosenCars; // liked vehicles
 
 
 

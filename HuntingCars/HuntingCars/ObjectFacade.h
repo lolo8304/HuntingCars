@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CustomerProfile.h"
+#import "VehicleApi.h"
 
 @interface ObjectFacade : NSObject
+@property (nonatomic, strong) VehicleApi *api;
 
+-(id) initWithApi: (VehicleApi*) api;
+-(NSArray*) findMatchingCarsByProfile: (CustomerProfile*) profile;
 @end
