@@ -26,13 +26,17 @@
     
     for (NSString* key in scores)
     {
-        NSString *queryString = [self ratingQueryWithKey: key andValue: [scores objectForKey: key]];
-        NSArray* resultForScore = [super queryServer: queryString];
-        if (results == nil) {
-           
-            results = [NSMutableSet set];
+        NSValue *value = [scores objectForKey:key];
+        if ([value rangeValue].location > 0) //values <= 0 don't have to be searched, because there are no negative scores.
+        {
+            NSString *queryString = [self ratingQueryWithKey: key andValue: [scores objectForKey: key]];
+            NSArray* resultForScore = [super queryServer: queryString];
+            if (results == nil)
+            {
+                results = [NSMutableSet set];
+            }
+            [results addObjectsFromArray:resultForScore];
         }
-        [results addObjectsFromArray:resultForScore];
     }
     return [results allObjects];
 }
@@ -42,9 +46,10 @@
     return [super queryServer:[NSString stringWithFormat:@"/score/sport/5.json"]];
 }
 
-- (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSString*) value
+- (NSString*) ratingQueryWithKey: (NSString*) key andValue: (NSValue*) value
 {
-    return [NSString stringWithFormat: @"/score/%@/%@.json", key, value];
+    NSRange range = [value rangeValue];
+    return [NSString stringWithFormat: @"/score/%@/%lu/%lu.json", key, (unsigned long)range.location, (unsigned long)NSMaxRange(range)];
 }
 
 
