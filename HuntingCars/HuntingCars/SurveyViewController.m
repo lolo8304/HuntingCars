@@ -24,6 +24,7 @@
 - (IBAction)designSegment1Changed:(id)sender;
 - (IBAction)designSegment2Changed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *totalPriceField;
+- (IBAction)huntCarPressed:(id)sender;
 
 
 @property (weak, nonatomic)  CustomerProfile *customerProfile;
@@ -122,4 +123,16 @@
     [self.designSegment1 setSelectedSegmentIndex:-1];
     NSLog(@"current designSegment = %li", (long)[self getDesignSegment]);
 }
+
+- (IBAction)huntCarPressed:(id)sender {
+    [self.customerProfile setGenderIndex: self.genderSegment.selectedSegmentIndex];
+    [self.customerProfile setAgeIndex: self.ageSegment.selectedSegmentIndex];
+    [self.customerProfile setFamilyStatusIndex: self.familyStatusSegment.selectedSegmentIndex];
+    [self.customerProfile setHorsePower: self.horsePowerSlider.value];
+    [self.customerProfile setDesignIndex: [self getDesignSegment]];
+    [self.customerProfile setPriceToBuy: self.priceSlider.value];
+    [self.customerProfile setPriceTCOperMonthString: self.totalPriceField.text];
+
+}
+
 @end
