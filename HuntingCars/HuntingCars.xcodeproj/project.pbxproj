@@ -11,6 +11,8 @@
 		0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */; settings = {ASSET_TAGS = (); }; };
 		0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */; settings = {ASSET_TAGS = (); }; };
 		0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6F11BBFD85F00D08DBE /* DAO.m */; settings = {ASSET_TAGS = (); }; };
+		056EF6DB1BC0051700652771 /* ProfileCruncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DA1BC0051700652771 /* ProfileCruncher.m */; settings = {ASSET_TAGS = (); }; };
+		056EF6DE1BC00A3000652771 /* SearchCriteriaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DD1BC00A3000652771 /* SearchCriteriaTest.m */; settings = {ASSET_TAGS = (); }; };
 		E17073321BBF6A380023AD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073311BBF6A380023AD57 /* main.m */; };
 		E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073341BBF6A390023AD57 /* AppDelegate.m */; };
 		E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073371BBF6A390023AD57 /* SurveyViewController.m */; };
@@ -47,6 +49,9 @@
 		0568E6F11BBFD85F00D08DBE /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
 		0568E6F31BBFD87000D08DBE /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
 		0568E6F41BBFD89D00D08DBE /* VehicleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleDAO.h; sourceTree = "<group>"; };
+		056EF6DA1BC0051700652771 /* ProfileCruncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCruncher.m; sourceTree = "<group>"; };
+		056EF6DC1BC0052D00652771 /* ProfileCruncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCruncher.h; sourceTree = "<group>"; };
+		056EF6DD1BC00A3000652771 /* SearchCriteriaTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCriteriaTest.m; sourceTree = "<group>"; };
 		E170732D1BBF6A380023AD57 /* HuntingCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuntingCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17073311BBF6A380023AD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17073331BBF6A390023AD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +110,8 @@
 				0568E6E91BBFB24000D08DBE /* RestApi.m */,
 				0568E6EB1BBFCD2D00D08DBE /* VehicleApi.h */,
 				0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */,
+				056EF6DC1BC0052D00652771 /* ProfileCruncher.h */,
+				056EF6DA1BC0051700652771 /* ProfileCruncher.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 			children = (
 				E170734A1BBF6A3C0023AD57 /* HuntingCarsTests.m */,
 				E170734C1BBF6A3C0023AD57 /* Info.plist */,
+				056EF6DD1BC00A3000652771 /* SearchCriteriaTest.m */,
 			);
 			path = HuntingCarsTests;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */,
 				0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */,
 				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
+				056EF6DB1BC0051700652771 /* ProfileCruncher.m in Sources */,
 				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
 				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
 				E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */,
@@ -387,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056EF6DE1BC00A3000652771 /* SearchCriteriaTest.m in Sources */,
 				E170734B1BBF6A3C0023AD57 /* HuntingCarsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
