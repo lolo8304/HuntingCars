@@ -34,10 +34,29 @@
 
 - (void)initModelWith: (ApplicationState*) state {
     self.customerProfile = [state customerProfile];
-    [self.genderSegment setSelectedSegmentIndex: self.customerProfile.getGenderIndex];
-    self.ageSegment setSelectedSegmentIndex: self.customerProfile.age
+    
+    [self setSegmentIndex: self.genderSegment index: self.customerProfile.getGenderIndex];
+    [self setSegmentIndex: self.ageSegment index: self.customerProfile.getAgeIndex];
+    [self setSegmentIndex: self.familyStatusSegment index:self.customerProfile.getFamilyStatusIndex];
+
+    [self.horsePowerSlider setValue: (float)self.customerProfile.horsePower];
+    [self setDesignSegment: self.customerProfile.getDesignIndex];
+    
     [self.priceSlider setValue: (float)[self.customerProfile priceToBuy]];
+    [self.totalPriceField setText: [self.customerProfile getPriceTCOperMonthString]];
 }
+
+- (void) setSegmentIndex: (UISegmentedControl*) segment index: (int) index {
+    if (index == -1) {
+        [segment setSelectedSegmentIndex: -1];
+        [segment setSelected:false];
+    } else {
+        [segment setSelectedSegmentIndex: index];
+        [segment setSelected:true];
+    }
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -89,9 +108,10 @@
     }
 }
 
+//change actions back to customer profile
+
 
 - (IBAction)designSegment1Changed:(id)sender {
-
     [self.designSegment2 setSelected:false];
     [self.designSegment2 setSelectedSegmentIndex:-1];
     NSLog(@"current designSegment = %li", (long)[self getDesignSegment]);

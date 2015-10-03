@@ -80,7 +80,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Xlw-56-Phd" kind="show" id="Khi-kd-ref"/>
+                                    <segue destination="Xlw-56-Phd" kind="showDetail" id="Khi-kd-ref"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziM-o6-jaA">
