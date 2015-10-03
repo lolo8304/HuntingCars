@@ -1,5 +1,5 @@
 //
-//  MyCarsViewController.h
+//  MyCarTableViewCell.h
 //  HuntingCars
 //
 //  Created by Lorenz Hänggi on 03/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyCarsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MyCarTableViewCell : UITableViewCell
 
 @end

@@ -30,6 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = @[[[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"DONE" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)]];
+    [numberToolbar sizeToFit];
+    self.totalPriceField.inputAccessoryView = numberToolbar;
+    
+}
+
+-(void)cancelNumberPad{
+    [self.totalPriceField resignFirstResponder];
+    self.totalPriceField.text = @"";
+}
+
+-(void)doneWithNumberPad{
+    NSString *numberFromTheKeyboard = self.totalPriceField.text;
+    [self.totalPriceField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

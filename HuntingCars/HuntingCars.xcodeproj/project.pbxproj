@@ -26,6 +26,7 @@
 		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073741BBFA2450023AD57 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
+		E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		E17073711BBF84930023AD57 /* DetailsHuntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsHuntViewController.m; sourceTree = "<group>"; };
 		E17073731BBFA2450023AD57 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerProfile.h; path = Assets.xcassets/CustomerProfile.h; sourceTree = "<group>"; };
 		E17073741BBFA2450023AD57 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerProfile.m; path = Assets.xcassets/CustomerProfile.m; sourceTree = "<group>"; };
+		E1AA89E51BC037AE00EE6D53 /* MyCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarTableViewCell.h; sourceTree = "<group>"; };
+		E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 			children = (
 				E17073641BBF84650023AD57 /* MyCarsViewController.h */,
 				E17073651BBF84650023AD57 /* MyCarsViewController.m */,
+				E1AA89E51BC037AE00EE6D53 /* MyCarTableViewCell.h */,
+				E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */,
 			);
 			name = MyCars;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */,
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
+				E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */,
 				E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */,
 				0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,

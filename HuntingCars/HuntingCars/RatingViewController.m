@@ -12,6 +12,16 @@
 
 - (IBAction)thumbsUpButtonPressed:(id)sender;
 - (IBAction)thumbsDownButtonPressed:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *huntingCarLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *vehicleHeading1Label;
+@property (weak, nonatomic) IBOutlet UILabel *vehicleHeading2Label;
+@property (weak, nonatomic) IBOutlet UIImageView *vehicleImage1;
+
+
+
+
 @end
 
 @implementation RatingViewController
