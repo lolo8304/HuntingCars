@@ -17,7 +17,8 @@
 
 - (void)setUp {
     [super setUp];
-    NSString *baseUrl = @"https://private-anon-25e20dbfa-amaghackzurich.apiary-mock.com/hackzurich";
+//    NSString *baseUrl = @"https://private-anon-25e20dbfa-amaghackzurich.apiary-mock.com/hackzurich";
+    NSString *baseUrl = @"http://api.hackzurich.amag.ch/hackzurich";
     self.restApi = [[VehicleApi alloc] initWithBaseUrl: baseUrl];
 }
 
@@ -41,6 +42,13 @@
     // then
     XCTAssertNotNil(results);
     XCTAssertTrue([results count] > 0);
+}
+
+-(void) testRangeComparison {
+    NSRange lowerRange = NSMakeRange(0, 1);
+    NSRange higherRange = NSMakeRange(2, 1);
+    
+    XCTAssertFalse(NSEqualRanges(lowerRange, higherRange));
 }
 
 - (void)testPerformanceExample {

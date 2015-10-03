@@ -8,7 +8,6 @@
 //
 
 #import "CustomerProfile.h"
-
 @implementation CustomerProfile
 
 @end
