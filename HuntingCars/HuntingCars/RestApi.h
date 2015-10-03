@@ -13,6 +13,8 @@
 
 - (id) initWithBaseUrl: (NSString*) baseUrl;
 - (NSArray*) queryServer: (NSString*) query;
+-(NSDictionary*) queryForSingleObject: (NSString*) query;
+
 @end
 
 #endif /* RestApi_h */

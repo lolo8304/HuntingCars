@@ -8,13 +8,13 @@
 
 #ifndef VehicleApi_h
 #define VehicleApi_h
-
 #import "RestApi.h"
+
 @interface VehicleApi : RestApi
 
 - (NSArray*) fetchAllCars;
-- (NSArray*) fetchFastCars;
 - (NSArray*) fetchCarsByScores: (NSDictionary*) scores;
+- (NSDictionary*) fetchDetailsByVin: (NSString*) vid;
 
 @end
 

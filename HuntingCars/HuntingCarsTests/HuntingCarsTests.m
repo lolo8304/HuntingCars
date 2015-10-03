@@ -27,11 +27,6 @@
     [super tearDown];
 }
 
-- (void)testE2EAvailability {
-    NSArray *fastCars = [self.restApi fetchFastCars];
-    XCTAssertNotNil(fastCars);
-}
-
 - (void)testFetchingByMultipleScores {
     // given
     NSDictionary *dict = [NSDictionary dictionaryWithObjects: @[[self standardValue], [self standardValue], [self standardValue], [self standardValue], [self standardValue]] forKeys: @[@"family", @"sport", @"eco", @"design", @"offroad"]];
@@ -42,6 +37,19 @@
     // then
     XCTAssertNotNil(results);
     XCTAssertTrue([results count] > 0);
+}
+
+- (void)testFetchingVehicleDetails {
+    // given
+    NSString *vin = @"VSSZZZ1PZ9R032038";
+    
+    // when
+    NSDictionary *result = [self.restApi fetchDetailsByVin: vin];
+    NSArray *images = [result objectForKey:@"vehicleImages"];
+    
+    // then
+    XCTAssertNotNil(result);
+    XCTAssertNotNil(images);
 }
 
 -(NSValue*) standardValue
