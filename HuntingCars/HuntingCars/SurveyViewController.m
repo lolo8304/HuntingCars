@@ -7,6 +7,8 @@
 //
 
 #import "SurveyViewController.h"
+#import "CustomerProfile.h"
+#import "ApplicationState.h"
 
 @interface SurveyViewController ()
 
@@ -23,13 +25,23 @@
 - (IBAction)designSegment2Changed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *totalPriceField;
 
+
+@property (weak, nonatomic)  CustomerProfile *customerProfile;
+
 @end
 
 @implementation SurveyViewController
 
+- (void)initModelWith: (ApplicationState*) state {
+    self.customerProfile = [state customerProfile];
+    [self.priceSlider setValue: (float)[self.customerProfile priceToBuy]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self initModelWith: [ApplicationState instance]];
     
     
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];

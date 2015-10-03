@@ -27,8 +27,10 @@
 		E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073741BBFA2450023AD57 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
 		E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */; settings = {ASSET_TAGS = (); }; };
+		E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */; settings = {ASSET_TAGS = (); }; };
+		E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +82,14 @@
 		E170736E1BBF84870023AD57 /* DetailsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMapViewController.m; sourceTree = "<group>"; };
 		E17073701BBF84930023AD57 /* DetailsHuntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsHuntViewController.h; sourceTree = "<group>"; };
 		E17073711BBF84930023AD57 /* DetailsHuntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsHuntViewController.m; sourceTree = "<group>"; };
-		E17073731BBFA2450023AD57 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerProfile.h; path = Assets.xcassets/CustomerProfile.h; sourceTree = "<group>"; };
-		E17073741BBFA2450023AD57 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerProfile.m; path = Assets.xcassets/CustomerProfile.m; sourceTree = "<group>"; };
 		E1AA89E51BC037AE00EE6D53 /* MyCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarTableViewCell.h; sourceTree = "<group>"; };
 		E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarTableViewCell.m; sourceTree = "<group>"; };
+		E1AA89E81BC04BBF00EE6D53 /* ApplicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationState.h; sourceTree = "<group>"; };
+		E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationState.m; sourceTree = "<group>"; };
+		E1AA89EB1BC04DE000EE6D53 /* ObjectFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFacade.h; sourceTree = "<group>"; };
+		E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFacade.m; sourceTree = "<group>"; };
+		E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerProfile.m; sourceTree = "<group>"; };
+		E1AA89EF1BC0502000EE6D53 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerProfile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 				0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */,
 				056EF6DC1BC0052D00652771 /* ProfileCruncher.h */,
 				056EF6DA1BC0051700652771 /* ProfileCruncher.m */,
+				E1AA89EB1BC04DE000EE6D53 /* ObjectFacade.h */,
+				E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -267,8 +275,10 @@
 		E170735F1BBF6DD10023AD57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E17073731BBFA2450023AD57 /* CustomerProfile.h */,
-				E17073741BBFA2450023AD57 /* CustomerProfile.m */,
+				E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */,
+				E1AA89EF1BC0502000EE6D53 /* CustomerProfile.h */,
+				E1AA89E81BC04BBF00EE6D53 /* ApplicationState.h */,
+				E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -383,15 +393,17 @@
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
 				E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */,
-				E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */,
 				0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */,
+				E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
 				0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */,
 				0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */,
 				0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */,
+				E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */,
 				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
 				056EF6DB1BC0051700652771 /* ProfileCruncher.m in Sources */,
 				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
+				E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */,
 				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
 				E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */,
 				E17073321BBF6A380023AD57 /* main.m in Sources */,
