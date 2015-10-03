@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *designSegment2;
 - (IBAction)designSegment1Changed:(id)sender;
 - (IBAction)designSegment2Changed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *totalPriceField;
 
 @end
 
