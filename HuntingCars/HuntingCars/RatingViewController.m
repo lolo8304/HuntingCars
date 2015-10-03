@@ -7,6 +7,8 @@
 //
 
 #import "RatingViewController.h"
+#import "ShowLoader.h"
+#import "ApplicationState.h"
 
 @interface RatingViewController ()
 
@@ -28,7 +30,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc]
+               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.center = CGPointMake(160, 240);
+    spinner.hidesWhenStopped = YES;
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^ {
+        
+        [[ApplicationState instance] searchWithCustomerProfile];
+        
+        NSLog(@"Finished work in background");
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            NSLog(@"Back on main thread");
+            
+            [spinner stopAnimating];
+            
+        });
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {

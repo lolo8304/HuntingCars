@@ -11,5 +11,5 @@
 
 @interface ShowLoader : NSObject
 - (id)initWithController: (UIViewController*) controller;
-- (void) perform: (dispatch_block_t) block title: (NSString *) title success: (NSString *) successText failure: (NSString*) failureText segueWithIdentifier: (NSString *) segueId sender: sender;
+- (void) perform: (dispatch_block_t) block;
 @end

@@ -80,8 +80,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="huntCarPressed:" destination="xLZ-dh-g4M" eventType="touchUpInside" id="2My-dA-ItZ"/>
-                                    <segue destination="Xlw-56-Phd" kind="showDetail" identifier="huntCars" id="Khi-kd-ref"/>
+                                    <segue destination="Xlw-56-Phd" kind="show" identifier="huntCars" id="oR3-ic-dh8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziM-o6-jaA">
@@ -639,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6v-DH-U4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-939" y="72"/>
+            <point key="canvasLocation" x="-858" y="72"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="HPA-aH-qdY">
