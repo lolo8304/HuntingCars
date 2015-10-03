@@ -7,16 +7,18 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "RestApi.h"
 
 @interface HuntingCarsTests : XCTestCase
-
+@property (strong, nonatomic) RestApi* restApi;
 @end
 
 @implementation HuntingCarsTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    NSString *baseUrl = @"https://private-anon-25e20dbfa-amaghackzurich.apiary-mock.com/hackzurich";
+    self.restApi = [[RestApi alloc] initWithBaseUrl: baseUrl];
 }
 
 - (void)tearDown {
@@ -25,8 +27,8 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSDictionary *fastCars = [self.restApi fetchFastCars];
+    XCTAssertNotNil(fastCars);
 }
 
 - (void)testPerformanceExample {

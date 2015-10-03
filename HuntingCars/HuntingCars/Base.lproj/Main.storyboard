@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xLZ-dh-g4M">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -96,9 +97,9 @@
                                 <exclude reference="Qiq-8G-GVg"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ew5-hu-oBT"/>
-                                <exclude reference="Cs9-Vd-eaH"/>
                                 <exclude reference="Ois-04-Cgz"/>
+                                <exclude reference="Cs9-Vd-eaH"/>
+                                <exclude reference="ew5-hu-oBT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -108,9 +109,9 @@
                                 <include reference="Qiq-8G-GVg"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ew5-hu-oBT"/>
-                                <include reference="Cs9-Vd-eaH"/>
                                 <include reference="Ois-04-Cgz"/>
+                                <include reference="Cs9-Vd-eaH"/>
+                                <include reference="ew5-hu-oBT"/>
                             </mask>
                         </variation>
                     </view>
@@ -273,17 +274,17 @@
                                 <exclude reference="sEL-r2-pWE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1it-p4-52q"/>
-                                <exclude reference="4cK-Hb-fcO"/>
-                                <exclude reference="A5X-i3-6UX"/>
-                                <exclude reference="Vs7-B1-K1O"/>
+                                <exclude reference="Czg-6f-Wrs"/>
+                                <exclude reference="bH1-Ee-tOt"/>
                                 <exclude reference="Avc-vM-qS7"/>
                                 <exclude reference="xc3-7q-wJj"/>
+                                <exclude reference="A5X-i3-6UX"/>
+                                <exclude reference="Vs7-B1-K1O"/>
+                                <exclude reference="1it-p4-52q"/>
+                                <exclude reference="4cK-Hb-fcO"/>
                                 <exclude reference="VKh-3L-5k2"/>
                                 <exclude reference="e1s-1w-r2w"/>
                                 <exclude reference="xtF-Fl-U7b"/>
-                                <exclude reference="Czg-6f-Wrs"/>
-                                <exclude reference="bH1-Ee-tOt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -296,17 +297,17 @@
                                 <include reference="sEL-r2-pWE"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1it-p4-52q"/>
-                                <include reference="4cK-Hb-fcO"/>
-                                <include reference="A5X-i3-6UX"/>
-                                <include reference="Vs7-B1-K1O"/>
+                                <include reference="Czg-6f-Wrs"/>
+                                <include reference="bH1-Ee-tOt"/>
                                 <include reference="Avc-vM-qS7"/>
                                 <include reference="xc3-7q-wJj"/>
+                                <include reference="A5X-i3-6UX"/>
+                                <include reference="Vs7-B1-K1O"/>
+                                <include reference="1it-p4-52q"/>
+                                <include reference="4cK-Hb-fcO"/>
                                 <include reference="VKh-3L-5k2"/>
                                 <include reference="e1s-1w-r2w"/>
                                 <include reference="xtF-Fl-U7b"/>
-                                <include reference="Czg-6f-Wrs"/>
-                                <include reference="bH1-Ee-tOt"/>
                             </mask>
                         </variation>
                     </view>
@@ -330,7 +331,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25p-OA-o1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1408.5" y="819"/>
+            <point key="canvasLocation" x="-1723.5" y="709"/>
         </scene>
     </scenes>
     <resources>

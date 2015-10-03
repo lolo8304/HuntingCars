@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6E91BBFB24000D08DBE /* RestApi.m */; settings = {ASSET_TAGS = (); }; };
 		E17073321BBF6A380023AD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073311BBF6A380023AD57 /* main.m */; };
 		E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073341BBF6A390023AD57 /* AppDelegate.m */; };
 		E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073371BBF6A390023AD57 /* SurveyViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0568E6E81BBFB21200D08DBE /* RestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestApi.h; sourceTree = "<group>"; };
+		0568E6E91BBFB24000D08DBE /* RestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestApi.m; sourceTree = "<group>"; };
 		E170732D1BBF6A380023AD57 /* HuntingCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuntingCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17073311BBF6A380023AD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17073331BBF6A390023AD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0568E6E71BBFB1D400D08DBE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0568E6E81BBFB21200D08DBE /* RestApi.h */,
+				0568E6E91BBFB24000D08DBE /* RestApi.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		E17073241BBF6A370023AD57 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 		E170732F1BBF6A380023AD57 /* HuntingCars */ = {
 			isa = PBXGroup;
 			children = (
+				0568E6E71BBFB1D400D08DBE /* Service */,
 				E17073601BBF6E3A0023AD57 /* Const.h */,
 				E170735F1BBF6DD10023AD57 /* Models */,
 				E17073571BBF6D0F0023AD57 /* Controllers */,
@@ -329,6 +342,7 @@
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
+				0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */,
 				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
 				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
 				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
@@ -522,6 +536,7 @@
 				E17073511BBF6A3C0023AD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E17073521BBF6A3C0023AD57 /* Build configuration list for PBXNativeTarget "HuntingCarsTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +545,7 @@
 				E17073541BBF6A3C0023AD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
