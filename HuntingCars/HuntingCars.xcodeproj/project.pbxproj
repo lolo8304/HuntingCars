@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6E91BBFB24000D08DBE /* RestApi.m */; settings = {ASSET_TAGS = (); }; };
+		0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */; settings = {ASSET_TAGS = (); }; };
+		0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */; settings = {ASSET_TAGS = (); }; };
+		0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6F11BBFD85F00D08DBE /* DAO.m */; settings = {ASSET_TAGS = (); }; };
 		E17073321BBF6A380023AD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073311BBF6A380023AD57 /* main.m */; };
 		E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073341BBF6A390023AD57 /* AppDelegate.m */; };
 		E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073371BBF6A390023AD57 /* SurveyViewController.m */; };
@@ -35,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0568E6E81BBFB21200D08DBE /* RestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestApi.h; sourceTree = "<group>"; };
+		0568E6E91BBFB24000D08DBE /* RestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestApi.m; sourceTree = "<group>"; };
+		0568E6EB1BBFCD2D00D08DBE /* VehicleApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VehicleApi.h; sourceTree = "<group>"; };
+		0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleApi.m; sourceTree = "<group>"; };
+		0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleDAO.m; sourceTree = "<group>"; };
+		0568E6F11BBFD85F00D08DBE /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
+		0568E6F31BBFD87000D08DBE /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
+		0568E6F41BBFD89D00D08DBE /* VehicleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleDAO.h; sourceTree = "<group>"; };
 		E170732D1BBF6A380023AD57 /* HuntingCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuntingCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17073311BBF6A380023AD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17073331BBF6A390023AD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +97,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0568E6E71BBFB1D400D08DBE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0568E6EE1BBFD7E300D08DBE /* DAO */,
+				0568E6E81BBFB21200D08DBE /* RestApi.h */,
+				0568E6E91BBFB24000D08DBE /* RestApi.m */,
+				0568E6EB1BBFCD2D00D08DBE /* VehicleApi.h */,
+				0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0568E6EE1BBFD7E300D08DBE /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				0568E6F11BBFD85F00D08DBE /* DAO.m */,
+				0568E6F31BBFD87000D08DBE /* DAO.h */,
+				0568E6F41BBFD89D00D08DBE /* VehicleDAO.h */,
+				0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		E17073241BBF6A370023AD57 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +142,7 @@
 		E170732F1BBF6A380023AD57 /* HuntingCars */ = {
 			isa = PBXGroup;
 			children = (
+				0568E6E71BBFB1D400D08DBE /* Service */,
 				E17073601BBF6E3A0023AD57 /* Const.h */,
 				E170735F1BBF6DD10023AD57 /* Models */,
 				E17073571BBF6D0F0023AD57 /* Controllers */,
@@ -334,7 +370,11 @@
 				E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */,
 				E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */,
 				E17073751BBFA2450023AD57 /* CustomerProfile.m in Sources */,
+				0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
+				0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */,
+				0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */,
+				0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */,
 				E17073631BBF84570023AD57 /* RatingViewController.m in Sources */,
 				E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */,
 				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
