@@ -9,7 +9,6 @@
 #import "SurveyViewController.h"
 #import "CustomerProfile.h"
 #import "ApplicationState.h"
-#import "ShowLoader.h"
 
 @interface SurveyViewController ()
 
@@ -25,7 +24,6 @@
 - (IBAction)designSegment1Changed:(id)sender;
 - (IBAction)designSegment2Changed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *totalPriceField;
-- (IBAction)huntCarPressed:(id)sender;
 
 
 @property (weak, nonatomic)  CustomerProfile *customerProfile;

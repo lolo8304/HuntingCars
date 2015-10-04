@@ -11,6 +11,7 @@
 @interface DAO : NSObject
 -(id) initWithDictionary: (NSDictionary*) dict;
 -(NSDictionary*) dictionay;
+-(void)updateDictionary: (NSDictionary*) dictionary;
 
 - (NSString*) s: (NSString*) key;
 - (NSString*) i: (NSString*) key;

@@ -31,7 +31,6 @@
 		E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */; settings = {ASSET_TAGS = (); }; };
 		E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */; settings = {ASSET_TAGS = (); }; };
 		E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA89F31BC0673B00EE6D53 /* ShowLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89F21BC0673B00EE6D53 /* ShowLoader.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +90,6 @@
 		E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFacade.m; sourceTree = "<group>"; };
 		E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerProfile.m; sourceTree = "<group>"; };
 		E1AA89EF1BC0502000EE6D53 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerProfile.h; sourceTree = "<group>"; };
-		E1AA89F11BC0673A00EE6D53 /* ShowLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoader.h; sourceTree = "<group>"; };
-		E1AA89F21BC0673B00EE6D53 /* ShowLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +197,6 @@
 		E17073571BBF6D0F0023AD57 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1AA89F11BC0673A00EE6D53 /* ShowLoader.h */,
-				E1AA89F21BC0673B00EE6D53 /* ShowLoader.m */,
 				E17073581BBF6D1A0023AD57 /* Survey */,
 				E17073591BBF6D370023AD57 /* Rating */,
 				E170735A1BBF6D400023AD57 /* MyCars */,
@@ -408,7 +403,6 @@
 				E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */,
 				0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */,
 				E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */,
-				E1AA89F31BC0673B00EE6D53 /* ShowLoader.m in Sources */,
 				E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */,
 				0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */,
 				0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */,

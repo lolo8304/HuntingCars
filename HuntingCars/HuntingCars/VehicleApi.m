@@ -52,7 +52,7 @@
 {
     NSString *queryUrl = [NSString stringWithFormat:@"/vehicle/%@.json", vid];
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[super queryForSingleObject: queryUrl]];
-    [result setObject:[self translateImages: [result objectForKey: @"vehicleImages"]] forKey:@"vehicleImages"];
+    [result setObject:[self translateImages: [result objectForKey: @"vehicleImages"]] forKey:@"vehicleImagesURL"];
     return result;
 }
 

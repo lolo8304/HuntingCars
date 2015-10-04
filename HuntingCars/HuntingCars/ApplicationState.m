@@ -68,7 +68,9 @@
 }
 
 - (VehicleDAO*) loadVehicleDetails: (VehicleDAO*) vehicle {
-    return [[self objectFacade] findVehicleByVin: [vehicle vin]];
+    VehicleDAO* newVehicle = [[self objectFacade] findVehicleByVin: [vehicle vin]];
+    [vehicle updateDictionary: [newVehicle dictionay]];
+     return vehicle;
 }
 
 - (VehicleDAO*)getCurrentFoundCar {

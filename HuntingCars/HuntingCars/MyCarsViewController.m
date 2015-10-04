@@ -7,6 +7,9 @@
 //
 
 #import "MyCarsViewController.h"
+#import "ApplicationState.h"
+#import "MyCarTableViewCell.h"
+#import "VehicleDAO.h"
 
 
 //Sections
@@ -21,9 +24,13 @@
 
 @implementation MyCarsViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,88 +57,45 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     
-    //TODO dynamics: Size of myCars
-    if (section == kMyCarDetailsSectionIndex) return 1;
+    if (section == kMyCarDetailsSectionIndex) return [[[ApplicationState instance] chosenCars] count];
     else return 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"row=%ld section = %ld", (long)indexPath.row, (long)indexPath.section);
-    /*
+
     if (indexPath.section==kMyCarDetailsSectionIndex) {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCarDetails" forIndexPath:indexPath];
+        MyCarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCarDetails" forIndexPath:indexPath];
         
+        // indexPath.row = index to choosenCar
+        VehicleDAO* vehicle =[[ApplicationState instance] chosenCars][indexPath.row];
+        [cell.vehicleHeading1Label setText: [vehicle vehicleMainHeading1]];
+        
+        [cell.totalScoreLabel setText: @"87%"];
+        [cell.milageLabel setText: [vehicle milage]];
+        [cell.priceLabel setText: [vehicle price]];
+        [cell.emissionLabel setText: [vehicle emissions]];
+        [cell.tcoLabel setText:[vehicle tcoPerMonth ]];
+        
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^ {
+            NSLog(@"Finished work in background");
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                [cell.vehicleImage1 setImage: [vehicle uiImage0]];
+                NSLog(@"Back on main thread");
+            });
+        });
+
+/*
+         dispatch_sync(dispatch_get_main_queue(), ^{
+             [cell.vehicleImage1 setImage: [vehicle uiImage0]];
+        });
+*/
         return cell;
         
     }
-    else if (indexPath.section==kProtectionSectionIndex) {
-        ProtectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProtectionCell" forIndexPath:indexPath];
-        
-        
-        if (indexPath.row == 0) {
-            cell.desc.text = @"At home";
-            cell.logo.image = [UIImage imageNamed:@"option-at-home.png"];
-            [cell.informationButton setImage:[UIImage imageNamed:@"option-info.png"] forState:UIControlStateNormal];
-            cell.status.image =[UIImage imageNamed:kStatusCheck];
-            
-            if ([ImagesModel sharedManager].currentImageIndex == kImacIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusCheck];
-            }
-            else if ([ImagesModel sharedManager].currentImageIndex == kVuittonIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusCheck];
-            }
-        }
-        else if (indexPath.row == 1) {
-            cell.desc.text = @"In the car";
-            [cell.informationButton setImage:[UIImage imageNamed:@"option-info.png"] forState:UIControlStateNormal];
-            cell.logo.image = [UIImage imageNamed:@"option-in-the-car.png"];
-            cell.status.image =[UIImage imageNamed:kStatusKO];
-            
-            //option-info.png
-            if ([ImagesModel sharedManager].currentImageIndex == kImacIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusWarning];
-            }
-            else if ([ImagesModel sharedManager].currentImageIndex == kVuittonIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusKO];
-            }
-            
-        }
-        else if (indexPath.row == 2) {
-            cell.desc.text = @"Outside";
-            [cell.informationButton setImage:[UIImage imageNamed:@"option-info.png"] forState:UIControlStateNormal];
-            cell.logo.image = [UIImage imageNamed:@"option-outside.png"];
-            cell.status.image =[UIImage imageNamed:kStatusWarning];
-            if ([ImagesModel sharedManager].currentImageIndex == kImacIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusKO];
-            }
-            else if ([ImagesModel sharedManager].currentImageIndex == kVuittonIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusKO];
-            }
-            
-        }
-        else if (indexPath.row == 3) {
-            cell.desc.text = @"Traveling";
-            [cell.informationButton setImage:[UIImage imageNamed:@"option-info.png"] forState:UIControlStateNormal];
-            cell.logo.image = [UIImage imageNamed:@"option-traveling.png"];
-            cell.status.image =[UIImage imageNamed:kStatusWarning];
-            
-            if ([ImagesModel sharedManager].currentImageIndex == kImacIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusKO];
-            }
-            else if ([ImagesModel sharedManager].currentImageIndex == kVuittonIndex) {
-                cell.status.image =[UIImage imageNamed:kStatusWarning];
-            }
-            
-        }
-        return cell;
-     
-    }
-     */
-    
-    NSLog(@"Your assurance detail : Cell return nil row=%ld section = %ld", (long)indexPath.row, (long)indexPath.section);
-    
     return nil;
 }
 
@@ -143,7 +107,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     NSString * cellIdentifier = nil;
-    
+    /*
     cellIdentifier = @"TitleHeader";
     
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -161,12 +125,15 @@
     if (cell == nil){
         [NSException raise:@"headerView == nil.." format:@"No cells with matching CellIdentifier loaded from your storyboard"];
     }
-    return cell;
+    return cell;*/
+    return nil;
     
 }
 
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return nil;
+    /*
     NSString * cellIdentifier = nil;
     //	else
     if (section == [self.tableView numberOfSections]-1) {
@@ -181,34 +148,22 @@
         
     }
     return nil;
+     */
 }
 
 
 
 #pragma mark - cell size
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) return 60;
-    else {
-        return 50;
-    }
+    if (indexPath.section == kMyCarDetailsSectionIndex) return 116;
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    
-    if (section==[self.tableView numberOfSections]-1) {
-        return 60;
-    }
     return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    //if (section==0) return 0;
-    /*
-    if (section == 0 && self.numberOption == 0) {
-        return 0;
-    }
-     */
-    
     return 24;
 }
 

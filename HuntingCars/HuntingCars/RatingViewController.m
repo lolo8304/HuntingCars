@@ -7,7 +7,6 @@
 //
 
 #import "RatingViewController.h"
-#import "ShowLoader.h"
 #import "ApplicationState.h"
 
 @interface RatingViewController ()
@@ -32,8 +31,12 @@
     [super viewDidLoad];
 
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc]
-               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.center = CGPointMake(160, 240);
+               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    CGRect frame = spinner.frame;
+    frame.origin.x = self.view.frame.size.width / 2 - frame.size.width / 2;
+    frame.origin.y = self.view.frame.size.height / 2 - frame.size.height / 2;
+    spinner.frame = frame;
+
     spinner.hidesWhenStopped = YES;
     [self.view addSubview:spinner];
     [spinner startAnimating];
@@ -42,14 +45,16 @@
     dispatch_async(queue, ^ {
         
         [[ApplicationState instance] searchWithCustomerProfile];
-        [self prepareVehicleData];
         
         NSLog(@"Finished work in background");
         dispatch_async(dispatch_get_main_queue(), ^ {
             NSLog(@"Back on main thread");
             
             [spinner stopAnimating];
-            
+            [spinner removeFromSuperview];
+
+            [self prepareVehicleData];
+
         });
     });
     
@@ -75,26 +80,21 @@
         
         NSURL* url = [vehicle image0];
         if (url) {
-            [self.vehicleImage1 setImage: [self getImageFromURL: url]];
+            [self.vehicleImage1 setImage: [vehicle uiImage0]];
         } else {
             [self.vehicleImage1 setImage: [UIImage imageNamed: @"no-image-found" ]];
         }
 }
 
 
-- (UIImage*)getImageFromURL: (NSURL*) urlString {
-    NSData *imageData =[NSData dataWithContentsOfURL: urlString];
-    return [UIImage imageWithData: imageData];
-}
-
 
 - (IBAction)thumbsUpButtonPressed:(id)sender {
     [[ApplicationState instance] likeCurrentVehicle];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^ {
-        [self prepareVehicleData];
         NSLog(@"Finished work in background");
         dispatch_async(dispatch_get_main_queue(), ^ {
+            [self prepareVehicleData];
             NSLog(@"Back on main thread");
         });
     });
@@ -105,9 +105,9 @@
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^ {
-        [self prepareVehicleData];
         NSLog(@"Finished work in background");
         dispatch_async(dispatch_get_main_queue(), ^ {
+            [self prepareVehicleData];
             NSLog(@"Back on main thread");
         });
     });

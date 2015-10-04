@@ -25,6 +25,9 @@
 -(NSDictionary*) dictionay {
     return self.dict;
 }
+-(void)updateDictionary: (NSDictionary*) dictionary {
+    self.dict = dictionary;
+}
 
 
 - (NSString*) s: (NSString*) key {

@@ -706,6 +706,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="UPe-fG-bi6"/>
+                                    <constraint firstAttribute="height" constant="33" id="eSq-2T-8fB"/>
                                     <constraint firstAttribute="width" constant="118" id="ifV-wy-f8x">
                                         <variation key="widthClass=compact" constant="198"/>
                                     </constraint>
@@ -716,13 +717,14 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="UPe-fG-bi6"/>
+                                        <exclude reference="eSq-2T-8fB"/>
                                         <exclude reference="ifV-wy-f8x"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="101" y="124" width="198" height="33"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="UPe-fG-bi6"/>
+                                        <include reference="eSq-2T-8fB"/>
                                         <include reference="ifV-wy-f8x"/>
                                     </mask>
                                 </variation>
@@ -746,8 +748,7 @@
                                         <exclude reference="lOz-EC-6cN"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110" y="167" width="60" height="62"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="M2l-sk-QfN"/>
                                         <include reference="lOz-EC-6cN"/>
@@ -776,8 +777,7 @@
                                         <exclude reference="oNi-7R-DAe"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="228" y="167" width="60" height="62"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="9Sp-Od-a5w"/>
                                         <include reference="oNi-7R-DAe"/>
@@ -802,8 +802,7 @@
                                         <exclude reference="Xl3-pE-GP9"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="80" y="291" width="240" height="150"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Uqs-8q-AXS"/>
                                         <include reference="Xl3-pE-GP9"/>
@@ -826,8 +825,7 @@
                                         <exclude reference="7u8-T7-bIc"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="261" width="360" height="22"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="2o5-zt-i5y"/>
                                         <exclude reference="7u8-T7-bIc"/>
@@ -840,9 +838,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="237" width="360" height="22"/>
-                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shooping-cart" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-YZ-2H0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -915,6 +910,17 @@
                                     <segue destination="NXa-0h-92f" kind="show" id="qfj-1f-Y9T"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HQ-yI-ZiI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="back"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="86" y="550" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="xLZ-dh-g4M" kind="show" id="x34-sg-2E7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.0" blue="0.2901960784" alpha="0.39864864859999999" colorSpace="calibratedRGB"/>
@@ -976,6 +982,7 @@
                                 <exclude reference="WVh-YZ-2H0"/>
                                 <exclude reference="WpX-BL-YUA"/>
                                 <exclude reference="W5a-Qv-sOP"/>
+                                <exclude reference="1HQ-yI-ZiI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="phG-aU-fW7"/>
@@ -1024,6 +1031,7 @@
                                 <include reference="WVh-YZ-2H0"/>
                                 <include reference="WpX-BL-YUA"/>
                                 <include reference="W5a-Qv-sOP"/>
+                                <include reference="1HQ-yI-ZiI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="phG-aU-fW7"/>
@@ -1072,7 +1080,7 @@
             </objects>
             <point key="canvasLocation" x="-156" y="72"/>
         </scene>
-        <!--Hunted cars-->
+        <!--My Cars View Controller-->
         <scene sceneID="QGY-Uv-HET">
             <objects>
                 <tableViewController id="NXa-0h-92f" customClass="MyCarsViewController" sceneMemberID="viewController">
@@ -1081,6 +1089,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="gni-kv-vdy">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <items>
+                                <navigationItem title="Hunted cars" id="MKS-m4-uxs">
+                                    <barButtonItem key="backBarButtonItem" title="Ratings" id="HSi-2d-kn0"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCarDetails" rowHeight="116" id="Cdd-Y2-WnX" customClass="MyCarTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="116"/>
@@ -1424,6 +1442,15 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="emissionLabel" destination="Xfo-fp-Pkz" id="KXn-aH-zLB"/>
+                                    <outlet property="milageLabel" destination="JQ3-S0-Upk" id="lT0-L3-ZdJ"/>
+                                    <outlet property="priceLabel" destination="b3O-v0-bl0" id="slX-dh-YPq"/>
+                                    <outlet property="tcoLabel" destination="lLd-gh-Zbl" id="uMS-HK-aq3"/>
+                                    <outlet property="totalScoreLabel" destination="5ZH-Ut-H7t" id="Elw-HU-bPI"/>
+                                    <outlet property="vehicleHeading1Label" destination="1KB-dr-9Sp" id="jd7-Ay-b0b"/>
+                                    <outlet property="vehicleImage1" destination="Nr9-Oh-EyF" id="l7A-79-epd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1431,7 +1458,8 @@
                             <outlet property="delegate" destination="NXa-0h-92f" id="wXd-vs-gcv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hunted cars" id="MKS-m4-uxs"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
                     <connections>
                         <outlet property="myCarsTableView" destination="ZOg-9C-9tI" id="ddZ-j4-uhM"/>
                     </connections>
@@ -1464,4 +1492,7 @@
         <image name="thumbs-down" width="700" height="700"/>
         <image name="thumbs-up" width="700" height="700"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="x34-sg-2E7"/>
+    </inferredMetricsTieBreakers>
 </document>
