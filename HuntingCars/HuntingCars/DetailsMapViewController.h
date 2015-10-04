@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <MapKit/MKAnnotation.h>
 
-@interface DetailsMapViewController : UIViewController
+@interface DetailsMapViewController : UIViewController<MKMapViewDelegate,  CLLocationManagerDelegate>
 
 @end

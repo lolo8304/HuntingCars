@@ -36,6 +36,7 @@
 
 - (VehicleDAO*)getCurrentFoundCar;
 - (VehicleDAO*)getCurrentChoosenCar;
+
 - (bool)hasCurrentFoundCar;
 - (bool)hasCurrentChoosenCar;
 

@@ -93,5 +93,4 @@
     return self.getCurrentChoosenCar != nil;
 }
 
-
 @end

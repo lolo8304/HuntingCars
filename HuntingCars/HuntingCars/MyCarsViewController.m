@@ -168,5 +168,11 @@
 }
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"huntDetails"]) {
+        [ApplicationState instance].chosenCarsIndex = 0;
+    }
+}
+
 
 @end
