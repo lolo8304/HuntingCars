@@ -39,10 +39,9 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
     if ([@"male" isEqualToString:[self.profile gender]]) {
         [dict setObject:[self increaseValueOf:dict withKey:@"sport"] forKey:@"sport"];
-        [dict setObject:[self increaseValueOf:dict withKey:@"offroad"] forKey:@"offroad"];
     } else {
         [dict setObject:[self increaseValueOf:dict withKey:@"family"] forKey:@"family"];
-        [dict setObject:[self decreaseValueOf: dict withKey: @"design"] forKey:@"design"];
+//        [dict setObject:[self decreaseValueOf: dict withKey: @"design"] forKey:@"design"];
     }
     return dict;
 }
@@ -55,19 +54,18 @@
     }
     else if (26 > [self.profile age].location)
     {
-        [dict setObject:[self decreaseValueOf:dict withKey:@"price"] forKey:@"price"];
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
+//        [dict setObject:[self decreaseValueOf:dict withKey:@"price"] forKey:@"price"];
+//        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
     }
     else if (36 > [self.profile age].location)
     {
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"family"];
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 2)] forKey:@"eco"];
-        [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
+//        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
+//        [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
     }
     else if (46 > [self.profile age].location)
     {
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"family"];
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 2)] forKey:@"eco"];
+        [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"eco"];
+        // [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"family"];
     }
     else
     {
@@ -81,7 +79,7 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
     if ([@"alone" isEqualToString:[self.profile familyStatus]])
     {
-        [dict setObject:[NSValue valueWithRange:NSMakeRange(3, 1)] forKey:@"design"];
+        [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
     }
     return dict;
 }
@@ -113,14 +111,14 @@
             [dict setObject: [NSValue valueWithRange:NSMakeRange(3, 1)] forKey:@"offroad"];
             break;
         case 5:
-            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"offroad"];
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"offroad"];
             [dict setObject:[NSValue valueWithRange:NSMakeRange(4, 1)] forKey:@"eco"];
             break;
         case 6:
             [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"design"];
             break;
         case 7:
-            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 2)] forKey:@"price"];
+            [dict setObject:[NSValue valueWithRange:NSMakeRange(1, 1)] forKey:@"price"];
             break;
         default:
             break;
