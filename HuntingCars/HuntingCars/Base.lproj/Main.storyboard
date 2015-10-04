@@ -406,17 +406,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nk-9c-qcm">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="543" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="YAC-vG-XWQ" kind="show" id="s7d-ql-MMM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.0" blue="0.2901960784" alpha="0.39864864859999999" colorSpace="calibratedRGB"/>
@@ -515,7 +504,6 @@
                                 <exclude reference="PUe-eD-ylh"/>
                                 <exclude reference="HrY-Lt-joo"/>
                                 <exclude reference="IN7-8T-uuS"/>
-                                <exclude reference="9Nk-9c-qcm"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ois-04-Cgz"/>
@@ -587,7 +575,6 @@
                                 <include reference="PUe-eD-ylh"/>
                                 <include reference="HrY-Lt-joo"/>
                                 <include reference="IN7-8T-uuS"/>
-                                <include reference="9Nk-9c-qcm"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ois-04-Cgz"/>
@@ -1894,6 +1881,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="x34-sg-2E7"/>
-        <segue reference="NrP-uy-678"/>
     </inferredMetricsTieBreakers>
 </document>
