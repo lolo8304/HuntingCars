@@ -31,6 +31,7 @@
 		E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */; settings = {ASSET_TAGS = (); }; };
 		E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */; settings = {ASSET_TAGS = (); }; };
 		E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
+		E1AA8A381BC0EB4E00EE6D53 /* Sound-Red.aiff in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A371BC0EB4E00EE6D53 /* Sound-Red.aiff */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFacade.m; sourceTree = "<group>"; };
 		E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerProfile.m; sourceTree = "<group>"; };
 		E1AA89EF1BC0502000EE6D53 /* CustomerProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerProfile.h; sourceTree = "<group>"; };
+		E1AA8A371BC0EB4E00EE6D53 /* Sound-Red.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "Sound-Red.aiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 		E170735E1BBF6D650023AD57 /* DetailsHunt */ = {
 			isa = PBXGroup;
 			children = (
+				E1AA8A371BC0EB4E00EE6D53 /* Sound-Red.aiff */,
 				E17073701BBF84930023AD57 /* DetailsHuntViewController.h */,
 				E17073711BBF84930023AD57 /* DetailsHuntViewController.m */,
 			);
@@ -380,6 +383,7 @@
 				E17073401BBF6A3A0023AD57 /* LaunchScreen.storyboard in Resources */,
 				E170733D1BBF6A3A0023AD57 /* Assets.xcassets in Resources */,
 				E170733B1BBF6A3A0023AD57 /* Main.storyboard in Resources */,
+				E1AA8A381BC0EB4E00EE6D53 /* Sound-Red.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

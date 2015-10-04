@@ -7,12 +7,17 @@
 //
 
 #import "DetailsHuntViewController.h"
+#import "AudioToolbox/AudioServices.h"
 
 @interface DetailsHuntViewController ()
 
 @end
 
 @implementation DetailsHuntViewController
+
+
+CFURLRef soundFileURLRefOther;
+SystemSoundID	soundFileObjectOther;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +28,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)playSound:(id)sender {
+    [self playSound];
+}
+
+- (void) playSound{
+    if (!soundFileURLRefOther) {
+        NSURL* sound = [self getURLSound];
+        soundFileURLRefOther = (CFURLRef)CFBridgingRetain(sound);
+        AudioServicesCreateSystemSoundID (soundFileURLRefOther, &soundFileObjectOther);
+    }
+    AudioServicesPlaySystemSound (soundFileObjectOther);
+}
+- (NSURL *)getURLSound {
+    return [[NSBundle mainBundle] URLForResource: @"Sound-Red"
+                                   withExtension: @"aiff"];
+}
+
 
 /*
 #pragma mark - Navigation
