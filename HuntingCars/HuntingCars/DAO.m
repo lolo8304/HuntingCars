@@ -22,4 +22,25 @@
     return self;
 }
 
+-(NSDictionary*) dictionay {
+    return self.dict;
+}
+
+
+- (NSString*) s: (NSString*) key {
+    return [self dict][key];
+}
+- (NSString*) i: (NSString*) key {
+    return [NSString stringWithFormat:@"%i", (int)[self dict][key]];
+}
+
+- (NSString*) s1: (NSString*) string1 and: (NSString*) by s2: (NSString*) string2 {
+    return [NSString stringWithFormat:@"%@%@%@", string1, by, string2];
+}
+
+- (NSArray*) a: (NSString*) key {
+    return [self dictionay][key];
+}
+
+
 @end

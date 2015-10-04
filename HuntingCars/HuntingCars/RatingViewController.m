@@ -42,6 +42,7 @@
     dispatch_async(queue, ^ {
         
         [[ApplicationState instance] searchWithCustomerProfile];
+        [self prepareVehicleData];
         
         NSLog(@"Finished work in background");
         dispatch_async(dispatch_get_main_queue(), ^ {
@@ -59,19 +60,56 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) prepareVehicleData {
+    [self.totalScoreLabel setText: @"88%"];
+    
+        VehicleDAO* vehicle =[[ApplicationState instance] getCurrentFoundCar];
+        vehicle = [[ApplicationState instance] loadVehicleDetails: vehicle ];
+    
+        NSMutableArray* choosen = [[ApplicationState instance] chosenCars ];
+        int nof = [ choosen count];
+        [self.huntingCarLabel setText: [NSString stringWithFormat:@"%d", nof]];
+    
+        [self.vehicleHeading1Label setText: [vehicle vehicleMainHeading1]];
+        [self.vehicleHeading2Label setText: [vehicle vehicleMainHeading2]];
+        
+        NSURL* url = [vehicle image0];
+        if (url) {
+            [self.vehicleImage1 setImage: [self getImageFromURL: url]];
+        } else {
+            [self.vehicleImage1 setImage: [UIImage imageNamed: @"no-image-found" ]];
+        }
 }
-*/
+
+
+- (UIImage*)getImageFromURL: (NSURL*) urlString {
+    NSData *imageData =[NSData dataWithContentsOfURL: urlString];
+    return [UIImage imageWithData: imageData];
+}
+
 
 - (IBAction)thumbsUpButtonPressed:(id)sender {
+    [[ApplicationState instance] likeCurrentVehicle];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^ {
+        [self prepareVehicleData];
+        NSLog(@"Finished work in background");
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            NSLog(@"Back on main thread");
+        });
+    });
 }
 
 - (IBAction)thumbsDownButtonPressed:(id)sender {
+    [[ApplicationState instance] dislikeCurrentVehicle];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^ {
+        [self prepareVehicleData];
+        NSLog(@"Finished work in background");
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            NSLog(@"Back on main thread");
+        });
+    });
 }
 @end

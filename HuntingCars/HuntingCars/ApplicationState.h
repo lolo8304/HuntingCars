@@ -31,10 +31,17 @@
 - (void) dislikeVehicle: (VehicleDAO*) vehicle;
 - (void) removeChooseVehicle: (VehicleDAO*) vehicle;
 
+- (VehicleDAO*) loadVehicleDetails: (VehicleDAO*) vehicle;
+
+
 - (VehicleDAO*)getCurrentFoundCar;
 - (VehicleDAO*)getCurrentChoosenCar;
 - (bool)hasCurrentFoundCar;
 - (bool)hasCurrentChoosenCar;
+
+- (void) likeCurrentVehicle;
+- (void) dislikeCurrentVehicle;
+- (void) removeCurrentChooseVehicle;
 
 
 @end

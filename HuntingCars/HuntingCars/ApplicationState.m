@@ -28,6 +28,8 @@
     self.customerProfile = [[CustomerProfile alloc] init];
     VehicleApi* vehicleAPI = [[VehicleApi alloc] initWithBaseUrl: REST_API_BASE_URL];
     self.objectFacade = [[ObjectFacade alloc] initWithApi: vehicleAPI];
+    self.chosenCars = [[NSMutableArray alloc] init];
+    self.foundCars = [[NSArray alloc] init];
     return self;
 }
 
@@ -37,6 +39,15 @@
     self.chosenCarsIndex = 0;
     return (int)self.foundCars.count;
 }
+- (void) likeCurrentVehicle {
+    VehicleDAO* vehicle = self.getCurrentFoundCar;
+    [self likeVehicle: vehicle];
+}
+- (void) dislikeCurrentVehicle {
+    VehicleDAO* vehicle = self.getCurrentFoundCar;
+    [self dislikeVehicle: vehicle];
+}
+
 - (void) likeVehicle: (VehicleDAO*) vehicle {
     [self.chosenCars addObject: vehicle];
     self.foundCarsIndex++;
@@ -46,8 +57,18 @@
     self.foundCarsIndex++;
     self.chosenCarsIndex = 0;
 }
+
+- (void) removeCurrentChooseVehicle {
+    VehicleDAO* vehicle = self.getCurrentChoosenCar;
+    [self removeChooseVehicle: vehicle];
+}
+
 - (void) removeChooseVehicle: (VehicleDAO*) vehicle {
     [self.chosenCars removeObject: vehicle];
+}
+
+- (VehicleDAO*) loadVehicleDetails: (VehicleDAO*) vehicle {
+    return [[self objectFacade] findVehicleByVin: [vehicle vin]];
 }
 
 - (VehicleDAO*)getCurrentFoundCar {

@@ -12,6 +12,14 @@
 
 @interface VehicleDAO : DAO
 
+
+- (NSString*) vehicleMainHeading1;
+- (NSString*) vehicleMainHeading2;
+- (NSString*) vin;
+- (NSArray*) images;
+- (NSURL*) image: (int) index;
+- (NSURL*) image0;
+
 @end
 
 #endif /* VehicleDAO_h */
