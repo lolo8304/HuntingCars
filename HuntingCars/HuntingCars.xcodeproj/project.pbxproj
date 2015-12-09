@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6E91BBFB24000D08DBE /* RestApi.m */; settings = {ASSET_TAGS = (); }; };
-		0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */; settings = {ASSET_TAGS = (); }; };
-		0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */; settings = {ASSET_TAGS = (); }; };
-		0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6F11BBFD85F00D08DBE /* DAO.m */; settings = {ASSET_TAGS = (); }; };
-		056EF6DB1BC0051700652771 /* ProfileCruncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DA1BC0051700652771 /* ProfileCruncher.m */; settings = {ASSET_TAGS = (); }; };
-		056EF6DE1BC00A3000652771 /* SearchCriteriaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DD1BC00A3000652771 /* SearchCriteriaTest.m */; settings = {ASSET_TAGS = (); }; };
+		0568E6EA1BBFB24000D08DBE /* RestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6E91BBFB24000D08DBE /* RestApi.m */; };
+		0568E6ED1BBFCD8900D08DBE /* VehicleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EC1BBFCD8900D08DBE /* VehicleApi.m */; };
+		0568E6F01BBFD7FD00D08DBE /* VehicleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */; };
+		0568E6F21BBFD85F00D08DBE /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568E6F11BBFD85F00D08DBE /* DAO.m */; };
+		056EF6DB1BC0051700652771 /* ProfileCruncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DA1BC0051700652771 /* ProfileCruncher.m */; };
+		056EF6DE1BC00A3000652771 /* SearchCriteriaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EF6DD1BC00A3000652771 /* SearchCriteriaTest.m */; };
 		E17073321BBF6A380023AD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073311BBF6A380023AD57 /* main.m */; };
 		E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073341BBF6A390023AD57 /* AppDelegate.m */; };
 		E17073381BBF6A390023AD57 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073371BBF6A390023AD57 /* SurveyViewController.m */; };
@@ -21,17 +21,19 @@
 		E17073401BBF6A3A0023AD57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E170733E1BBF6A3A0023AD57 /* LaunchScreen.storyboard */; };
 		E170734B1BBF6A3C0023AD57 /* HuntingCarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E170734A1BBF6A3C0023AD57 /* HuntingCarsTests.m */; };
 		E17073561BBF6B860023AD57 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17073551BBF6B860023AD57 /* MapKit.framework */; };
-		E17073631BBF84570023AD57 /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073621BBF84570023AD57 /* RatingViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073651BBF84650023AD57 /* MyCarsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073681BBF846E0023AD57 /* DetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */; settings = {ASSET_TAGS = (); }; };
-		E1AA8A381BC0EB4E00EE6D53 /* Sound-Red.aiff in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A371BC0EB4E00EE6D53 /* Sound-Red.aiff */; settings = {ASSET_TAGS = (); }; };
+		E17073631BBF84570023AD57 /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073621BBF84570023AD57 /* RatingViewController.m */; };
+		E17073661BBF84650023AD57 /* MyCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073651BBF84650023AD57 /* MyCarsViewController.m */; };
+		E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073681BBF846E0023AD57 /* DetailsViewController.m */; };
+		E170736C1BBF847C0023AD57 /* DetailsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736B1BBF847C0023AD57 /* DetailsInfoViewController.m */; };
+		E170736F1BBF84870023AD57 /* DetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E170736E1BBF84870023AD57 /* DetailsMapViewController.m */; };
+		E17073721BBF84930023AD57 /* DetailsHuntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17073711BBF84930023AD57 /* DetailsHuntViewController.m */; };
+		E1947EA41C1768D300ECF398 /* ScoreFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1947EA31C1768D300ECF398 /* ScoreFilter.m */; };
+		E1947EA71C17A05800ECF398 /* DealerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = E1947EA61C17A05800ECF398 /* DealerDAO.m */; };
+		E1AA89E71BC037AE00EE6D53 /* MyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */; };
+		E1AA89EA1BC04BBF00EE6D53 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89E91BC04BBF00EE6D53 /* ApplicationState.m */; };
+		E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */; };
+		E1AA89F01BC0502000EE6D53 /* CustomerProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA89EE1BC0502000EE6D53 /* CustomerProfile.m */; };
+		E1AA8A381BC0EB4E00EE6D53 /* Sound-Red.aiff in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A371BC0EB4E00EE6D53 /* Sound-Red.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		E170736E1BBF84870023AD57 /* DetailsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMapViewController.m; sourceTree = "<group>"; };
 		E17073701BBF84930023AD57 /* DetailsHuntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsHuntViewController.h; sourceTree = "<group>"; };
 		E17073711BBF84930023AD57 /* DetailsHuntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsHuntViewController.m; sourceTree = "<group>"; };
+		E1947EA21C1768D300ECF398 /* ScoreFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreFilter.h; sourceTree = "<group>"; };
+		E1947EA31C1768D300ECF398 /* ScoreFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreFilter.m; sourceTree = "<group>"; };
+		E1947EA51C17A05800ECF398 /* DealerDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealerDAO.h; sourceTree = "<group>"; };
+		E1947EA61C17A05800ECF398 /* DealerDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealerDAO.m; sourceTree = "<group>"; };
 		E1AA89E51BC037AE00EE6D53 /* MyCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarTableViewCell.h; sourceTree = "<group>"; };
 		E1AA89E61BC037AE00EE6D53 /* MyCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarTableViewCell.m; sourceTree = "<group>"; };
 		E1AA89E81BC04BBF00EE6D53 /* ApplicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationState.h; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 				056EF6DA1BC0051700652771 /* ProfileCruncher.m */,
 				E1AA89EB1BC04DE000EE6D53 /* ObjectFacade.h */,
 				E1AA89EC1BC04DE000EE6D53 /* ObjectFacade.m */,
+				E1947EA21C1768D300ECF398 /* ScoreFilter.h */,
+				E1947EA31C1768D300ECF398 /* ScoreFilter.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -136,6 +144,8 @@
 				0568E6F31BBFD87000D08DBE /* DAO.h */,
 				0568E6F41BBFD89D00D08DBE /* VehicleDAO.h */,
 				0568E6EF1BBFD7FD00D08DBE /* VehicleDAO.m */,
+				E1947EA51C17A05800ECF398 /* DealerDAO.h */,
+				E1947EA61C17A05800ECF398 /* DealerDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -418,7 +428,9 @@
 				E1AA89ED1BC04DE000EE6D53 /* ObjectFacade.m in Sources */,
 				E17073691BBF846E0023AD57 /* DetailsViewController.m in Sources */,
 				E17073351BBF6A390023AD57 /* AppDelegate.m in Sources */,
+				E1947EA41C1768D300ECF398 /* ScoreFilter.m in Sources */,
 				E17073321BBF6A380023AD57 /* main.m in Sources */,
+				E1947EA71C17A05800ECF398 /* DealerDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

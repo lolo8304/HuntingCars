@@ -9,11 +9,14 @@
 #ifndef VehicleDAO_h
 #define VehicleDAO_h
 #include "DAO.h"
+#include "ScoreFilter.h"
+#include "DealerDAO.h"
 #import <UIKit/UIKit.h>
 
 
 @interface VehicleDAO : DAO
-
+@property (nonatomic) float totalScore;
+@property (nonatomic) int countResult;
 
 - (NSString*) vehicleMainHeading1;
 - (NSString*) vehicleMainHeading2;
@@ -22,13 +25,24 @@
 - (NSString*) price;
 - (NSString*) emissions;
 - (NSString*) tcoPerMonth;
-
+- (NSString*) totalScoreString;
 
 - (NSArray*) images;
 - (NSURL*) image: (int) index;
 - (NSURL*) image0;
 - (UIImage*) uiImage: (int) index;
 - (UIImage*) uiImage0;
+
+- (DealerDAO*) dealer;
+
+- (int) sportScore;
+- (int) familyScore;
+- (int) ecoScore;
+- (int) priceScore;
+- (int) offroadScore ;
+- (int) designScore;
+
+- (float)updateTotalScore: (ScoreFilter*) filter;
 
 @end
 

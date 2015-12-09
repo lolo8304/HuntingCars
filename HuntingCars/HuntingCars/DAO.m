@@ -33,8 +33,20 @@
 - (NSString*) s: (NSString*) key {
     return [self dict][key];
 }
+- (NSDictionary*) d: (NSString*) key {
+    return [self dict][key];
+}
 - (NSString*) i: (NSString*) key {
     return [NSString stringWithFormat:@"%i", (int)[self dict][key]];
+}
+- (int) int: (NSString*) key {
+    NSNumber* n = [self dict][key];
+    return [n intValue];
+}
+
+- (double) double: (NSString*) key {
+    NSNumber* n = [self dict][key];
+    return [n doubleValue];
 }
 
 - (NSString*) s1: (NSString*) string1 and: (NSString*) by s2: (NSString*) string2 {

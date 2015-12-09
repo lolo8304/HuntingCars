@@ -16,6 +16,7 @@
 - (NSArray*) fetchAllCars;
 - (NSArray*) fetchCarsByScores: (NSDictionary*) scores;
 - (NSDictionary*) fetchDetailsByVin: (NSString*) vid;
+- (NSDictionary*) dealerDetailsById: (NSString*) id;
 
 @end
 

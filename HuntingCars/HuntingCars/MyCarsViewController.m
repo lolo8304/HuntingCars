@@ -73,7 +73,7 @@
         VehicleDAO* vehicle =[[ApplicationState instance] chosenCars][indexPath.row];
         [cell.vehicleHeading1Label setText: [vehicle vehicleMainHeading1]];
         
-        [cell.totalScoreLabel setText: @"87%"];
+        [cell.totalScoreLabel setText: [vehicle totalScoreString]];
         [cell.milageLabel setText: [vehicle milage]];
         [cell.priceLabel setText: [vehicle price]];
         [cell.emissionLabel setText: [vehicle emissions]];

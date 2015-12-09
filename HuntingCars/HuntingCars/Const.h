@@ -12,7 +12,9 @@
 #define FONT_BOOK @"ITCFranklinGothicStd-Book"
 #define FONT_DEMI @"ITCFranklinGothicStd-Demi"
 #define FONT_DEMI_CONDENSED @"ITCFranklinGothicStd-DmCd"
-#define REST_API_BASE_URL @"http://api.hackzurich.amag.ch/hackzurich"
+//#define REST_API_BASE_URL @"http://api.hackzurich.amag.ch/hackzurich"
+//#define REST_API_BASE_URL @"http://localhost:8080/hackzurich"
+#define REST_API_BASE_URL @"http://lolo.waltercedric.com"
 
 #define FAST_MODE 1
 

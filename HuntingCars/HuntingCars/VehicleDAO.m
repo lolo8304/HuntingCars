@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DAO.h"
 #import "VehicleDAO.h"
 #import <UIKit/UIKit.h>
+
 
 @implementation VehicleDAO : DAO
 
 -(id) initWithDictionary:(NSDictionary *)dict {
+    self.totalScore = 1.0f;
+    self.countResult = 1;
     return [super initWithDictionary: dict];
 }
 
@@ -33,8 +35,19 @@
 - (NSString*) emissions {
     return [self s1: [self i: @"emissions"] and: @" " s2: @"g/km"];
 }
+- (NSString*) totalScoreString {
+    int totalScoreInt = self.totalScore * 100;
+    return [NSString stringWithFormat:@"%i%%", totalScoreInt];
+}
+
+
 - (NSString*) tcoPerMonth {
     return [self s1: @"800" and: @" " s2: @"Fr."];
+}
+
+
+- (DealerDAO*) dealer {
+    return [[DealerDAO alloc] initWithDictionary: [self d: @"dealerDetails"]];
 }
 
 
@@ -75,6 +88,38 @@
 }
 - (UIImage*) uiImage0 {
     return [self uiImage: 0];
+}
+
+
+
+
+- (int) sportScore {
+    return [self int: @"sportScore"];
+}
+- (int) familyScore {
+    return [self int: @"familyScore"];
+}
+- (int) ecoScore {
+    return [self int: @"ecoScore"];
+}
+- (int) priceScore {
+    return [self int: @"priceScore"];
+}
+- (int) offroadScore {
+    return [self int: @"offroadScore"];
+}
+- (int) designScore {
+    return [self int: @"designScore"];
+}
+
+- (float)updateTotalScore: (ScoreFilter*) filter {
+    self.totalScore = [filter calculateTotalScore: self];
+    
+    int f = self.totalScore * 100;
+    NSString * totalScoreString = [NSString stringWithFormat:@"%i%%", f];
+    //NSLog(@"%@ - total score = %@", [self vehicleMainHeading1], totalScoreString);
+
+    return self.totalScore;
 }
 
 

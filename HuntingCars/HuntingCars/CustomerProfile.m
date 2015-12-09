@@ -12,8 +12,8 @@
 
 
 - (id) init {
-    self.priceToBuy = 1;
-    self.horsePower = 1;
+    self.priceToBuy = 0;
+    self.horsePower = 0;
     self.gender = nil;
     self.age = NSMakeRange(0, 0);
     self.familyStatus = nil;

@@ -131,6 +131,7 @@
     [self.customerProfile setDesignIndex: [self getDesignSegment]];
     [self.customerProfile setPriceToBuy: self.priceSlider.value];
     [self.customerProfile setPriceTCOperMonthString: self.totalPriceField.text];
+    [ApplicationState instance].search = true;
     
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

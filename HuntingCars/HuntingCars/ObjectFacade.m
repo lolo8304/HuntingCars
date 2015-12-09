@@ -33,7 +33,7 @@
     ProfileCruncher *cruncher = [[ProfileCruncher alloc] initWithCustomerProfile: profile];
     NSDictionary *searchCriteria = [cruncher calculateSearchCriteria];
     NSArray *searchResults = [self.api fetchCarsByScores: searchCriteria];
-    return [self asVehicleResults: searchResults];
+    return searchResults;
 }
 
 -(VehicleDAO*) findVehicleByVin: (NSString*) vin
@@ -56,14 +56,5 @@
     return results;
 }
 
--(NSArray*) asVehicleResults: (NSArray*) arrayOfDicts
-{
-    NSMutableArray *objectArray = [NSMutableArray array];
-    for (NSDictionary *dict in arrayOfDicts) {
-        VehicleDAO *vehicle = [[VehicleDAO alloc] initWithDictionary:dict];
-        [objectArray addObject:vehicle];
-    }
-    return objectArray;
-}
 
 @end

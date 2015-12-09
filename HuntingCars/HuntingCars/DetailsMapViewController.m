@@ -9,10 +9,15 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import "DetailsMapViewController.h"
+#import "ApplicationState.h"
 
 @interface DetailsMapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property(nonatomic, strong) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UILabel *dealerName;
+@property (weak, nonatomic) IBOutlet UILabel *dealerAdress;
+@property (weak, nonatomic) IBOutlet UILabel *dealerAddress2;
+@property (weak, nonatomic) IBOutlet UILabel *dealerContacts;
 
 @end
 
@@ -55,8 +60,23 @@
     
     //View Area
     MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
-    region.center.latitude = 47.4776239 ;
-    region.center.longitude =  8.7042655;
+    
+    ApplicationState* instance = [ApplicationState instance];
+    
+    //region.center.latitude = 47.4776239 ;
+    //region.center.longitude =  8.7042655;
+    VehicleDAO* vehicle =[instance getCurrentFoundCar];
+    DealerDAO* dealer = [vehicle dealer];
+    region.center.latitude =  [dealer latitude];
+    region.center.longitude =  [dealer longitude];
+    
+    [self.dealerName setText: [dealer name]];
+    [self.dealerAdress setText: [dealer address1]];
+    [self.dealerAddress2 setText: [dealer address2]];
+    [self.dealerContacts setText: [dealer contacts]];
+    
+    
+    
     region.span.longitudeDelta = 0.005f;
     region.span.latitudeDelta = 0.005f;
     [self.mapView setRegion:region animated:YES];

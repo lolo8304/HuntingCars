@@ -25,9 +25,15 @@
 
 @property (nonatomic) int foundCarsIndex;
 @property (nonatomic) int chosenCarsIndex;
+@property (nonatomic) int imageIndex;
+
+@property (nonatomic) bool search;
+
 
 - (int) searchWithCustomerProfile;
 - (void) likeVehicle: (VehicleDAO*) vehicle;
+- (void) prevImage: (VehicleDAO*) vehicle;
+- (void) nextImage: (VehicleDAO*) vehicle;
 - (void) dislikeVehicle: (VehicleDAO*) vehicle;
 - (void) removeChooseVehicle: (VehicleDAO*) vehicle;
 
@@ -41,6 +47,8 @@
 - (bool)hasCurrentChoosenCar;
 
 - (void) likeCurrentVehicle;
+- (void) prevImageCurrentVehicle;
+- (void) nextImageCurrentVehicle;
 - (void) dislikeCurrentVehicle;
 - (void) removeCurrentChooseVehicle;
 
