@@ -81,16 +81,18 @@
     {
         [dict setObject:[self increaseValueOf:dict withKey:@"design"] forKey:@"design"];
     }
+    if ([@"family" isEqualToString:[self.profile familyStatus]])
+    {
+        [dict setObject:[self increaseValueOf:dict withKey:@"family"] forKey:@"family"];
+    }
     return dict;
 }
 
 -(NSDictionary*) updateByHorsepower: (NSDictionary*) original
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: original];
-    if ([self.profile horsePower] != nil)
-    {
-        [dict setObject:[NSValue valueWithRange: NSMakeRange((unsigned long)[self.profile horsePower], 1)] forKey:@"sport"];
-    }
+    long horsePower = (long)[self.profile horsePower];
+    [dict setObject:[NSValue valueWithRange: NSMakeRange((unsigned long)horsePower, 1)] forKey:@"sport"];
     return dict;
 }
 
@@ -129,10 +131,16 @@
 -(NSDictionary*) updateByPrice: (NSDictionary*) original
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:original];
-    if ([self.profile priceToBuy] != nil)
-    {
-        [dict setObject:[NSValue valueWithRange:NSMakeRange((unsigned long)[self.profile priceToBuy], 1)] forKey:@"price"];
+    long profileValue = (long)[self.profile priceToBuy];
+    
+    /* the order of price is oposite as slider on view
+        1 = highest price
+        2 = lowest price 
+     */
+    if (profileValue > 0) {
+        profileValue = 6 - profileValue;
     }
+    [dict setObject:[NSValue valueWithRange:NSMakeRange((unsigned long)profileValue, 1)] forKey:@"price"];
     return dict;
 }
 

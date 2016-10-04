@@ -33,6 +33,8 @@
 
 @property NSInteger priceTCOperMonth;
 
+- (int) getPriceToBuyReversed;
+- (void) setPriceToBuyReversed: (int) index;
 
 
 - (id) init;

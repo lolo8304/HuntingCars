@@ -22,6 +22,21 @@
     return self;
 }
 
+- (int) getPriceToBuyReversed {
+    if (self.priceToBuy == 0) return 0;
+    return (int)(6 - self.priceToBuy);
+}
+- (void) setPriceToBuyReversed: (int) index; {
+    if (index == 0) {
+        self.priceToBuy = 0;
+    } else {
+        self.priceToBuy = (int)(6 - index);
+    }
+    
+}
+
+
+
 - (void) setFamilyStatusIndex: (int) index {
     self.familyStatus = [NSString stringWithFormat:@"%d", index];
 }

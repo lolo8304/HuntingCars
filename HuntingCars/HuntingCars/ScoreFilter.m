@@ -33,9 +33,9 @@
     }
 }
 
-- (float)factor: (int) score inRange: (NSRange) range {
+- (float)factor: (int) score inRange: (NSRange) range emptyValue: (int) emptyValue {
     if (range.location == 0) {
-        return 1.0;
+        return emptyValue;
     } else {
         if (NSLocationInRange(score, range)) {
             if (range.length == 0) {
@@ -57,36 +57,60 @@
     }
 }
 
-- (float)factor2: (NSString*) scoreString score: (int) score inRange: (NSRange) range {
-    float f = [self factor: score inRange: range];
+- (float)factor2: (NSString*) scoreString score: (int) score inRange: (NSRange) range emptyValue: (float) emptyValue {
+    float f = [self factor: score inRange: range emptyValue: emptyValue];
     //NSLog(@"%@ = %f, from %i ", scoreString, f, score);
     return f;
 }
 
 - (float)calculateTotalScore: (VehicleDAO*) vehicle {
-    return [self calculateAvgTotalScore: vehicle];
+    //return [self calculateAvgTotalScore: vehicle];
+    return [self calculateAvgNotCountingEmptyTotalScore: vehicle];
 }
 
 
- - (float)calculateAvgTotalScore: (VehicleDAO*) vehicle {
- return
- ([self factor2: @"sport" score: [vehicle sportScore] inRange: self.sportScore] +
- [self factor2: @"family" score: [vehicle familyScore] inRange: self.familyScore] +
- [self factor2: @"eco" score: [vehicle ecoScore] inRange: self.ecoScore] +
- [self factor2: @"price" score: [vehicle priceScore] inRange: self.priceScore] +
- [self factor2: @"offroad" score: [vehicle offroadScore] inRange: self.offroadScore] +
- [self factor2: @"design" score: [vehicle designScore] inRange: self.designScore]) / 6;
- }
+- (float)calculateAvgTotalScore: (VehicleDAO*) vehicle {
+    return
+    ([self factor2: @"sport" score: [vehicle sportScore] inRange: self.sportScore emptyValue: 1.0] +
+     [self factor2: @"family" score: [vehicle familyScore] inRange: self.familyScore emptyValue: 1.0] +
+     [self factor2: @"eco" score: [vehicle ecoScore] inRange: self.ecoScore emptyValue: 1.0] +
+     [self factor2: @"price" score: [vehicle priceScore] inRange: self.priceScore emptyValue: 1.0] +
+     [self factor2: @"offroad" score: [vehicle offroadScore] inRange: self.offroadScore emptyValue: 1.0] +
+     [self factor2: @"design" score: [vehicle designScore] inRange: self.designScore emptyValue: 1.0]) / 6;
+}
+
+- (float)calculateAvgNotCountingEmptyTotalScore: (VehicleDAO*) vehicle {
+    float totalScore = 0.0f;
+    int count = 0;
+    
+    float f = [self factor2: @"sport" score: [vehicle sportScore] inRange: self.sportScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    f = [self factor2: @"family" score: [vehicle familyScore] inRange: self.familyScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    f = [self factor2: @"eco" score: [vehicle ecoScore] inRange: self.ecoScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    f = [self factor2: @"price" score: [vehicle priceScore] inRange: self.priceScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    f = [self factor2: @"offroad" score: [vehicle offroadScore] inRange: self.offroadScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    f = [self factor2: @"design" score: [vehicle designScore] inRange: self.designScore emptyValue: 0.0f];
+    if (f > 0.0f) { totalScore = totalScore + f; count++; }
+    if (count > 0) {
+        return totalScore / count;
+    } else {
+        return 0.0f;
+    }
+}
 
 
  - (float)calculateProductTotalScore: (VehicleDAO*) vehicle {
  return
- [self factor2: @"sport" score: [vehicle sportScore] inRange: self.sportScore] *
- [self factor2: @"family" score: [vehicle familyScore] inRange: self.familyScore] *
- [self factor2: @"eco" score: [vehicle ecoScore] inRange: self.ecoScore] *
- [self factor2: @"price" score: [vehicle priceScore] inRange: self.priceScore] *
- [self factor2: @"offroad" score: [vehicle offroadScore] inRange: self.offroadScore] *
- [self factor2: @"design" score: [vehicle designScore] inRange: self.designScore];
+ [self factor2: @"sport" score: [vehicle sportScore] inRange: self.sportScore emptyValue: 1.0] *
+ [self factor2: @"family" score: [vehicle familyScore] inRange: self.familyScore emptyValue: 1.0] *
+ [self factor2: @"eco" score: [vehicle ecoScore] inRange: self.ecoScore emptyValue: 1.0] *
+ [self factor2: @"price" score: [vehicle priceScore] inRange: self.priceScore emptyValue: 1.0] *
+ [self factor2: @"offroad" score: [vehicle offroadScore] inRange: self.offroadScore emptyValue: 1.0] *
+ [self factor2: @"design" score: [vehicle designScore] inRange: self.designScore emptyValue: 1.0];
  }
 
 

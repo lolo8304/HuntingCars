@@ -42,7 +42,7 @@
     [self.horsePowerSlider setValue: (float)self.customerProfile.horsePower];
     [self setDesignSegment: self.customerProfile.getDesignIndex];
     
-    [self.priceSlider setValue: (float)[self.customerProfile priceToBuy]];
+    [self.priceSlider setValue: (float)[self.customerProfile getPriceToBuyReversed]];
     [self.totalPriceField setText: [self.customerProfile getPriceTCOperMonthString]];
 }
 
@@ -129,7 +129,7 @@
     [self.customerProfile setFamilyStatusIndex: self.familyStatusSegment.selectedSegmentIndex];
     [self.customerProfile setHorsePower: self.horsePowerSlider.value];
     [self.customerProfile setDesignIndex: [self getDesignSegment]];
-    [self.customerProfile setPriceToBuy: self.priceSlider.value];
+    [self.customerProfile setPriceToBuyReversed: self.priceSlider.value];
     [self.customerProfile setPriceTCOperMonthString: self.totalPriceField.text];
     [ApplicationState instance].search = true;
     

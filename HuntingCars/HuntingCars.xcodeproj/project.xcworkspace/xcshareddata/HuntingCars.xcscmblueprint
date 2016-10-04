@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "147FC0B816AC72410608DCBC3FF2DEEFE3139440",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "147FC0B816AC72410608DCBC3FF2DEEFE3139440" : 9223372036854775807,
+    "CDB82E4677B93E82FD85ABC7E60AFA1089F2C404" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "373D593B-A6EC-42DA-9A05-F43B919619B8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "147FC0B816AC72410608DCBC3FF2DEEFE3139440" : "is-this-the-right-car-for-me\/",
+    "CDB82E4677B93E82FD85ABC7E60AFA1089F2C404" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HuntingCars",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HuntingCars\/HuntingCars.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lolo8304\/is-this-the-right-car-for-me.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "147FC0B816AC72410608DCBC3FF2DEEFE3139440"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lolo8304\/schnee-horn.ch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CDB82E4677B93E82FD85ABC7E60AFA1089F2C404"
+    }
+  ]
+}
